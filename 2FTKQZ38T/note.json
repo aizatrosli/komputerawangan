@@ -1,0 +1,135 @@
+{
+  "paragraphs": [
+    {
+      "text": "z.put(\"MAPREDUCEA3\",\"/usr/hdp/current/zeppelin-server/komputerawangan/mapreduce\")",
+      "user": "anonymous",
+      "dateUpdated": "Dec 13, 2020 10:46:45 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1607855031358_-75184443",
+      "id": "20201213-102351_1426568680",
+      "dateCreated": "Dec 13, 2020 10:23:51 AM",
+      "dateStarted": "Dec 13, 2020 10:46:45 AM",
+      "dateFinished": "Dec 13, 2020 10:46:45 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sh echo {}\n",
+      "user": "anonymous",
+      "dateUpdated": "Dec 13, 2020 11:01:13 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/sh"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "{MAPREDUCEA3}\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1607855060000_-477015537",
+      "id": "20201213-102420_1257598781",
+      "dateCreated": "Dec 13, 2020 10:24:20 AM",
+      "dateStarted": "Dec 13, 2020 10:59:59 AM",
+      "dateFinished": "Dec 13, 2020 10:59:59 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "z.get(\"MAPREDUCEA3\")\n",
+      "user": "anonymous",
+      "dateUpdated": "Dec 13, 2020 10:58:39 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res3: Object \u003d /usr/hdp/current/zeppelin-server/komputerawangan/mapreduce\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1607855802567_1217859731",
+      "id": "20201213-103642_1844731149",
+      "dateCreated": "Dec 13, 2020 10:36:42 AM",
+      "dateStarted": "Dec 13, 2020 10:58:39 AM",
+      "dateFinished": "Dec 13, 2020 10:58:40 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "user": "anonymous",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1607857101771_-1379356809",
+      "id": "20201213-105821_1087707403",
+      "dateCreated": "Dec 13, 2020 10:58:21 AM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "MapReduce/Assignment3",
+  "id": "2FTKQZ38T",
+  "angularObjects": {
+    "2CHS8UYQQ:shared_process": [],
+    "2C8A4SZ9T_livy2:shared_process": [],
+    "2CK8A9MEG:shared_process": [],
+    "2C4U48MY3_spark2:shared_process": [],
+    "2CKAY1A8Y:shared_process": [],
+    "2CKEKWY8Z:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}
