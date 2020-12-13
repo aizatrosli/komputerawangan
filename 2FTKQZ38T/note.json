@@ -3,7 +3,7 @@
     {
       "text": "z.put(\"MAPREDUCEA3\",\"/usr/hdp/current/zeppelin-server/komputerawangan/mapreduce\")",
       "user": "anonymous",
-      "dateUpdated": "Dec 13, 2020 10:46:45 AM",
+      "dateUpdated": "Dec 13, 2020 11:18:27 AM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -26,15 +26,15 @@
       "jobName": "paragraph_1607855031358_-75184443",
       "id": "20201213-102351_1426568680",
       "dateCreated": "Dec 13, 2020 10:23:51 AM",
-      "dateStarted": "Dec 13, 2020 10:46:45 AM",
-      "dateFinished": "Dec 13, 2020 10:46:45 AM",
+      "dateStarted": "Dec 13, 2020 11:18:27 AM",
+      "dateFinished": "Dec 13, 2020 11:19:05 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%sh echo {}\n",
+      "text": "%sh echo {MAPREDUCEA3}\n",
       "user": "anonymous",
-      "dateUpdated": "Dec 13, 2020 11:01:13 AM",
+      "dateUpdated": "Dec 13, 2020 11:19:58 AM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -62,24 +62,26 @@
       "jobName": "paragraph_1607855060000_-477015537",
       "id": "20201213-102420_1257598781",
       "dateCreated": "Dec 13, 2020 10:24:20 AM",
-      "dateStarted": "Dec 13, 2020 10:59:59 AM",
-      "dateFinished": "Dec 13, 2020 10:59:59 AM",
+      "dateStarted": "Dec 13, 2020 11:19:58 AM",
+      "dateFinished": "Dec 13, 2020 11:19:59 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "z.get(\"MAPREDUCEA3\")\n",
+      "title": "MapReduce with hadoop-streaming",
+      "text": "%sh\nhadoop jar /usr/hdp/2.6.5.0-292/hadoop-mapreduce/hadoop-streaming.jar -file /home/raj_ops/mapper.py    -mapper /home/raj_ops/mapper.py -file /home/raj_ops/reducer.py   -reducer /home/raj_ops/reducer.py -input LOTR/*.txt -output /test1-output\n",
       "user": "anonymous",
-      "dateUpdated": "Dec 13, 2020 10:58:39 AM",
+      "dateUpdated": "Dec 13, 2020 11:25:53 AM",
       "config": {
-        "colWidth": 12.0,
+        "colWidth": 6.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
-          "language": "scala",
+          "language": "sh",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/scala"
+        "editorMode": "ace/mode/sh",
+        "title": true
       },
       "settings": {
         "params": {},
@@ -90,7 +92,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "res3: Object \u003d /usr/hdp/current/zeppelin-server/komputerawangan/mapreduce\n"
+            "data": "res1: Object \u003d /usr/hdp/current/zeppelin-server/komputerawangan/mapreduce\n"
           }
         ]
       },
@@ -98,9 +100,63 @@
       "jobName": "paragraph_1607855802567_1217859731",
       "id": "20201213-103642_1844731149",
       "dateCreated": "Dec 13, 2020 10:36:42 AM",
-      "dateStarted": "Dec 13, 2020 10:58:39 AM",
-      "dateFinished": "Dec 13, 2020 10:58:40 AM",
+      "dateStarted": "Dec 13, 2020 11:20:03 AM",
+      "dateFinished": "Dec 13, 2020 11:20:03 AM",
       "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n#### MapReduce using python and hadoop-streaming ####\n* mapper \u003d path of mapper python script\n* reducer \u003d path of reducer python script\n* input \u003d raw data in hdfs format\n* output \u003d wordcount in hdfs format",
+      "user": "anonymous",
+      "dateUpdated": "Dec 13, 2020 11:31:11 AM",
+      "config": {
+        "colWidth": 6.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003ch4\u003eMapReduce using python and hadoop-streaming\u003c/h4\u003e\n\u003cul\u003e\n\u003cli\u003emapper \u003d path of mapper python script\u003c/li\u003e\n\u003cli\u003ereducer \u003d path of reducer python script\u003c/li\u003e\n\u003cli\u003einput \u003d raw data in hdfs format\u003c/li\u003e\n\u003cli\u003eoutput \u003d wordcount in hdfs format\u003c/li\u003e\n\u003c/ul\u003e\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1607858758810_-1277395061",
+      "id": "20201213-112558_1761920060",
+      "dateCreated": "Dec 13, 2020 11:25:58 AM",
+      "dateStarted": "Dec 13, 2020 11:31:11 AM",
+      "dateFinished": "Dec 13, 2020 11:31:11 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sh\n",
+      "user": "anonymous",
+      "dateUpdated": "Dec 13, 2020 11:25:41 AM",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1607858741765_873335966",
+      "id": "20201213-112541_52880632",
+      "dateCreated": "Dec 13, 2020 11:25:41 AM",
+      "status": "READY",
       "progressUpdateIntervalMs": 500
     },
     {
