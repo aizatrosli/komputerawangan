@@ -1,18 +1,20 @@
 {
   "paragraphs": [
     {
-      "text": "z.put(\"MAPREDUCEA3\",\"/usr/hdp/current/zeppelin-server/komputerawangan/mapreduce\")",
+      "text": "%md\n\n## MapReduce Assignment3 ##",
       "user": "anonymous",
-      "dateUpdated": "Dec 13, 2020 11:18:27 AM",
+      "dateUpdated": "Dec 13, 2020 4:48:30 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
-          "language": "scala",
-          "editOnDblClick": false
+          "language": "markdown",
+          "editOnDblClick": true
         },
-        "editorMode": "ace/mode/scala"
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -20,14 +22,19 @@
       },
       "results": {
         "code": "SUCCESS",
-        "msg": []
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003ch2\u003eMapReduce Assignment3\u003c/h2\u003e\n"
+          }
+        ]
       },
       "apps": [],
       "jobName": "paragraph_1607855031358_-75184443",
       "id": "20201213-102351_1426568680",
       "dateCreated": "Dec 13, 2020 10:23:51 AM",
-      "dateStarted": "Dec 13, 2020 11:18:27 AM",
-      "dateFinished": "Dec 13, 2020 11:19:05 AM",
+      "dateStarted": "Dec 13, 2020 4:48:30 PM",
+      "dateFinished": "Dec 13, 2020 4:48:30 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -95,11 +102,19 @@
     {
       "text": "%md\n\n#### **Make HDFS folder** ####\n\nusing mkdir command to create hdfs folder\n\n````bash\nhadoop fs -mkdir {output hdfs}\n````",
       "user": "anonymous",
-      "dateUpdated": "Dec 13, 2020 4:24:35 PM",
+      "dateUpdated": "Dec 13, 2020 4:48:56 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
-        "results": {},
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 120.6,
+              "optionOpen": false
+            }
+          }
+        },
         "editorSetting": {
           "language": "markdown",
           "editOnDblClick": true
@@ -125,8 +140,8 @@
       "jobName": "paragraph_1607875567355_-161934586",
       "id": "20201213-160607_481936829",
       "dateCreated": "Dec 13, 2020 4:06:07 PM",
-      "dateStarted": "Dec 13, 2020 4:24:35 PM",
-      "dateFinished": "Dec 13, 2020 4:24:35 PM",
+      "dateStarted": "Dec 13, 2020 4:48:50 PM",
+      "dateFinished": "Dec 13, 2020 4:48:50 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -281,9 +296,9 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n\n## **MapReduce with Hadoop** ##\n",
+      "text": "%md\n\n### **MapReduce with Hadoop** ###\n",
       "user": "anonymous",
-      "dateUpdated": "Dec 13, 2020 4:23:43 PM",
+      "dateUpdated": "Dec 13, 2020 4:48:43 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -305,7 +320,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003ch2\u003e\u003cstrong\u003eMapReduce with Hadoop\u003c/strong\u003e\u003c/h2\u003e\n"
+            "data": "\u003ch3\u003e\u003cstrong\u003eMapReduce with Hadoop\u003c/strong\u003e\u003c/h3\u003e\n"
           }
         ]
       },
@@ -313,8 +328,8 @@
       "jobName": "paragraph_1607876563545_-1182092220",
       "id": "20201213-162243_445865205",
       "dateCreated": "Dec 13, 2020 4:22:43 PM",
-      "dateStarted": "Dec 13, 2020 4:23:43 PM",
-      "dateFinished": "Dec 13, 2020 4:23:43 PM",
+      "dateStarted": "Dec 13, 2020 4:48:43 PM",
+      "dateFinished": "Dec 13, 2020 4:48:43 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
