@@ -41,9 +41,9 @@
     {
       "text": "%sh echo {MAPREDUCEA3}\\\necho fuck\n",
       "user": "anonymous",
-      "dateUpdated": "Dec 13, 2020 12:34:45 PM",
+      "dateUpdated": "Dec 13, 2020 4:52:05 PM",
       "config": {
-        "colWidth": 12.0,
+        "colWidth": 6.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
@@ -75,11 +75,11 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%pyspark\n\n\n",
+      "text": "%pyspark\n\n\n\n\n\n\n",
       "user": "anonymous",
-      "dateUpdated": "Dec 13, 2020 3:40:08 PM",
+      "dateUpdated": "Dec 13, 2020 4:52:19 PM",
       "config": {
-        "colWidth": 12.0,
+        "colWidth": 6.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
@@ -96,7 +96,7 @@
       "jobName": "paragraph_1607873994939_-622897706",
       "id": "20201213-153954_1491090320",
       "dateCreated": "Dec 13, 2020 3:39:54 PM",
-      "status": "READY",
+      "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
