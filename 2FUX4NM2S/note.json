@@ -41,7 +41,7 @@
     {
       "text": "z.put(\"WORKPATH\", \"/usr/hdp/current/zeppelin-server/komputerawangan/assignment1\")\nz.put(\"BIGCSV\", \"listings.csv\")\nz.put(\"COUNTRY\", \"singapore\")\nz.put(\"DATASET\", \"listings\")",
       "user": "anonymous",
-      "dateUpdated": "Jan 1, 2021 1:51:41 AM",
+      "dateUpdated": "Jan 1, 2021 1:58:13 AM",
       "config": {
         "colWidth": 3.0,
         "enabled": true,
@@ -55,17 +55,23 @@
         "params": {},
         "forms": {}
       },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
       "apps": [],
       "jobName": "paragraph_1609465874643_459360281",
       "id": "20210101-015114_836921952",
       "dateCreated": "Jan 1, 2021 1:51:14 AM",
-      "status": "READY",
+      "dateStarted": "Jan 1, 2021 1:58:13 AM",
+      "dateFinished": "Jan 1, 2021 1:58:14 AM",
+      "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\n\nfrom urllib2 import urlopen\nimport pandas as pd\nimport re\n\ndef airbnburlminer(country\u003d\u0027singapore\u0027, dataset\u003d\u0027listings\u0027, ext\u003d\u0027.csv.gz\u0027):\n    page \u003d urlopen(\u0027http://insideairbnb.com/get-the-data.html\u0027)\n    html \u003d page.read().decode(\"utf-8\")\n    urlarr \u003d [str(re.sub(\u0027\u003ca href\u003d\".*?\u0027, \"\", csvfile)) for csvfile in re.findall(\u0027\u003ca href\u003d\".*{}.*?{}{}\u0027.format(country,dataset,ext), html)]\n    print(\u0027\\n\u0027.join(urlarr))\n    return pd.concat(map(lambda file: pd.read_csv(file, low_memory\u003dFalse), urlarr))\n    \n\ndf \u003d airbnburlminer()\ndf.to_csv(os.path.join(z.get(\u0027WORKPATH\u0027),z.get(\u0027BIGCSV\u0027)), index\u003dFalse)\n\n\n",
       "user": "anonymous",
-      "dateUpdated": "Jan 1, 2021 1:50:22 AM",
+      "dateUpdated": "Jan 1, 2021 1:58:17 AM",
       "config": {
         "colWidth": 5.0,
         "enabled": true,
@@ -93,15 +99,15 @@
       "jobName": "paragraph_1609460864164_1746050977",
       "id": "20210101-002744_280668179",
       "dateCreated": "Jan 1, 2021 12:27:44 AM",
-      "dateStarted": "Jan 1, 2021 1:42:00 AM",
-      "dateFinished": "Jan 1, 2021 1:44:04 AM",
+      "dateStarted": "Jan 1, 2021 1:58:17 AM",
+      "dateFinished": "Jan 1, 2021 2:00:12 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\n\ndf.info(verbose\u003dTrue, null_counts\u003dTrue)",
       "user": "anonymous",
-      "dateUpdated": "Jan 1, 2021 1:50:34 AM",
+      "dateUpdated": "Jan 1, 2021 1:58:20 AM",
       "config": {
         "colWidth": 3.0,
         "enabled": true,
@@ -136,24 +142,93 @@
       "jobName": "paragraph_1609464326974_-978652675",
       "id": "20210101-012526_1370460239",
       "dateCreated": "Jan 1, 2021 1:25:26 AM",
-      "dateStarted": "Jan 1, 2021 1:49:56 AM",
-      "dateFinished": "Jan 1, 2021 1:49:57 AM",
+      "dateStarted": "Jan 1, 2021 1:58:20 AM",
+      "dateFinished": "Jan 1, 2021 2:00:14 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%pyspark\n\nimport os\nimport pandas as pd\n\nairbnbcsvarr \u003d [os.path.join(z.get(\"WORKPATH\"), file) for file in os.listdir(z.get(\"WORKPATH\")) if file.endswith(\u0027.gz\u0027)]\nprint \u0027\\n\u0027.join(airbnbcsvarr)",
+      "text": "%md\n\nsdada\n",
       "user": "anonymous",
-      "dateUpdated": "Jan 1, 2021 12:37:54 AM",
+      "dateUpdated": "Jan 1, 2021 2:06:21 AM",
+      "config": {
+        "colWidth": 4.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cp\u003esdada\u003c/p\u003e\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1609466764813_-1377361449",
+      "id": "20210101-020604_1372011743",
+      "dateCreated": "Jan 1, 2021 2:06:04 AM",
+      "dateStarted": "Jan 1, 2021 2:06:21 AM",
+      "dateFinished": "Jan 1, 2021 2:06:21 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sh\n\nhadoop fs -rm -r -f sglistings\nhadoop fs -mkdir sglistings\nhadoop fs -put /usr/hdp/current/zeppelin-server/komputerawangan/assignment1/listings.csv sglistings",
+      "user": "anonymous",
+      "dateUpdated": "Jan 1, 2021 2:20:50 AM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
-          "language": "python",
+          "language": "sh",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/python"
+        "editorMode": "ace/mode/sh"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1609467532607_-1797604127",
+      "id": "20210101-021852_1476460381",
+      "dateCreated": "Jan 1, 2021 2:18:52 AM",
+      "dateStarted": "Jan 1, 2021 2:20:50 AM",
+      "dateFinished": "Jan 1, 2021 2:21:14 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%jdbc(hive)\n\nCREATE EXTERNAL TABLE IF NOT EXISTS {COUNTRY}_{DATASET}(\nWord STRING, \nCount INT)\nROW FORMAT DELIMITED FIELDS TERMINATED BY \u0027\\t\u0027 STORED AS TextFile LOCATION \u0027/Books_wordcount/part-00000\u0027",
+      "user": "anonymous",
+      "dateUpdated": "Jan 1, 2021 2:11:11 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/sql"
       },
       "settings": {
         "params": {},

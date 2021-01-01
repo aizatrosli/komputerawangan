@@ -39,18 +39,18 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%sh echo {MAPREDUCEA3}\\\necho fuck\n",
+      "text": "z.put(\"BOOKSDIR\", \"/usr/hdp/current/zeppelin-server/komputerawangan/assignment3/books\")",
       "user": "anonymous",
-      "dateUpdated": "Dec 13, 2020 4:52:05 PM",
+      "dateUpdated": "Jan 1, 2021 1:56:09 AM",
       "config": {
         "colWidth": 6.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
-          "language": "sh",
+          "language": "text",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/sh"
+        "editorMode": "ace/mode/text"
       },
       "settings": {
         "params": {},
@@ -58,19 +58,14 @@
       },
       "results": {
         "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "TEXT",
-            "data": "{MAPREDUCEA3}echo fuck\n"
-          }
-        ]
+        "msg": []
       },
       "apps": [],
       "jobName": "paragraph_1607855060000_-477015537",
       "id": "20201213-102420_1257598781",
       "dateCreated": "Dec 13, 2020 10:24:20 AM",
-      "dateStarted": "Dec 13, 2020 12:34:45 PM",
-      "dateFinished": "Dec 13, 2020 12:34:45 PM",
+      "dateStarted": "Jan 1, 2021 1:56:09 AM",
+      "dateFinished": "Jan 1, 2021 1:56:09 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -263,7 +258,7 @@
       "title": "Books tree-view",
       "text": "%sh\n\ntree /usr/hdp/current/zeppelin-server/komputerawangan/assignment3/books",
       "user": "anonymous",
-      "dateUpdated": "Dec 15, 2020 12:53:06 PM",
+      "dateUpdated": "Jan 1, 2021 1:57:08 AM",
       "config": {
         "colWidth": 6.0,
         "enabled": true,
@@ -300,8 +295,8 @@
       "jobName": "paragraph_1607875791877_1493376131",
       "id": "20201213-160951_1471613128",
       "dateCreated": "Dec 13, 2020 4:09:51 PM",
-      "dateStarted": "Dec 15, 2020 12:53:06 PM",
-      "dateFinished": "Dec 15, 2020 12:53:06 PM",
+      "dateStarted": "Jan 1, 2021 1:57:08 AM",
+      "dateFinished": "Jan 1, 2021 1:57:08 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
