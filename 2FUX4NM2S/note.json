@@ -1,0 +1,106 @@
+{
+  "paragraphs": [
+    {
+      "text": "%sh\n\ncd komputerawangan/assignment1\nls",
+      "user": "anonymous",
+      "dateUpdated": "Jan 1, 2021 12:09:24 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/sh"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "20191803.csv.gz\n20192004.csv.gz\n20192107.csv.gz\n20192305.csv.gz\n20192506.csv.gz\n20192509.csv.gz\n20192510.csv.gz\n20192611.csv.gz\n20192808.csv.gz\n20192812.csv.gz\n20202103.csv.gz\n20202206.csv.gz\n20202601.csv.gz\n20202604.csv.gz\n20202610.csv.gz\n20202702.csv.gz\n20202705.csv.gz\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1609459709067_1180017470",
+      "id": "20210101-000829_1764816744",
+      "dateCreated": "Jan 1, 2021 12:08:29 AM",
+      "dateStarted": "Jan 1, 2021 12:09:24 AM",
+      "dateFinished": "Jan 1, 2021 12:09:24 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n\nimport os,pandas\n\nprint os.getcwd()\n",
+      "user": "anonymous",
+      "dateUpdated": "Jan 1, 2021 12:10:15 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Traceback (most recent call last):\n  File \"/tmp/zeppelin_pyspark-4114371156265096997.py\", line 367, in \u003cmodule\u003e\n    raise Exception(traceback.format_exc())\nException: Traceback (most recent call last):\n  File \"/tmp/zeppelin_pyspark-4114371156265096997.py\", line 355, in \u003cmodule\u003e\n    exec(code, _zcUserQueryNameSpace)\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\nImportError: No module named pandas\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1609459736420_918803615",
+      "id": "20210101-000856_130370505",
+      "dateCreated": "Jan 1, 2021 12:08:56 AM",
+      "dateStarted": "Jan 1, 2021 12:10:15 AM",
+      "dateFinished": "Jan 1, 2021 12:10:58 AM",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "Jan 1, 2021 12:10:15 AM",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1609459815923_2116465644",
+      "id": "20210101-001015_1719729192",
+      "dateCreated": "Jan 1, 2021 12:10:15 AM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "AirbnbSingapore",
+  "id": "2FUX4NM2S",
+  "angularObjects": {
+    "2CHS8UYQQ:shared_process": [],
+    "2C8A4SZ9T_livy2:shared_process": [],
+    "2CK8A9MEG:shared_process": [],
+    "2C4U48MY3_spark2:shared_process": [],
+    "2CKAY1A8Y:shared_process": [],
+    "2CKEKWY8Z:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}
