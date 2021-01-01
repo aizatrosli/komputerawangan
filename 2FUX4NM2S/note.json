@@ -1,18 +1,80 @@
 {
   "paragraphs": [
     {
-      "text": "%sh\n\ncd komputerawangan/assignment1\nls",
+      "text": "%md\n\n\n### AIRBNB SG ###",
       "user": "anonymous",
-      "dateUpdated": "Jan 1, 2021 12:09:24 AM",
+      "dateUpdated": "Jan 1, 2021 1:51:57 AM",
       "config": {
-        "colWidth": 12.0,
+        "colWidth": 9.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
-          "language": "sh",
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003ch3\u003eAIRBNB SG\u003c/h3\u003e\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1609459709067_1180017470",
+      "id": "20210101-000829_1764816744",
+      "dateCreated": "Jan 1, 2021 12:08:29 AM",
+      "dateStarted": "Jan 1, 2021 1:51:57 AM",
+      "dateFinished": "Jan 1, 2021 1:51:58 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "z.put(\"WORKPATH\", \"/usr/hdp/current/zeppelin-server/komputerawangan/assignment1\")\nz.put(\"BIGCSV\", \"listings.csv\")\nz.put(\"COUNTRY\", \"singapore\")\nz.put(\"DATASET\", \"listings\")",
+      "user": "anonymous",
+      "dateUpdated": "Jan 1, 2021 1:51:41 AM",
+      "config": {
+        "colWidth": 3.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala"
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1609465874643_459360281",
+      "id": "20210101-015114_836921952",
+      "dateCreated": "Jan 1, 2021 1:51:14 AM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n\nfrom urllib2 import urlopen\nimport pandas as pd\nimport re\n\ndef airbnburlminer(country\u003d\u0027singapore\u0027, dataset\u003d\u0027listings\u0027, ext\u003d\u0027.csv.gz\u0027):\n    page \u003d urlopen(\u0027http://insideairbnb.com/get-the-data.html\u0027)\n    html \u003d page.read().decode(\"utf-8\")\n    urlarr \u003d [str(re.sub(\u0027\u003ca href\u003d\".*?\u0027, \"\", csvfile)) for csvfile in re.findall(\u0027\u003ca href\u003d\".*{}.*?{}{}\u0027.format(country,dataset,ext), html)]\n    print(\u0027\\n\u0027.join(urlarr))\n    return pd.concat(map(lambda file: pd.read_csv(file, low_memory\u003dFalse), urlarr))\n    \n\ndf \u003d airbnburlminer()\ndf.to_csv(os.path.join(z.get(\u0027WORKPATH\u0027),z.get(\u0027BIGCSV\u0027)), index\u003dFalse)\n\n\n",
+      "user": "anonymous",
+      "dateUpdated": "Jan 1, 2021 1:50:22 AM",
+      "config": {
+        "colWidth": 5.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/sh"
+        "editorMode": "ace/mode/python"
       },
       "settings": {
         "params": {},
@@ -23,23 +85,66 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "20191803.csv.gz\n20192004.csv.gz\n20192107.csv.gz\n20192305.csv.gz\n20192506.csv.gz\n20192509.csv.gz\n20192510.csv.gz\n20192611.csv.gz\n20192808.csv.gz\n20192812.csv.gz\n20202103.csv.gz\n20202206.csv.gz\n20202601.csv.gz\n20202604.csv.gz\n20202610.csv.gz\n20202702.csv.gz\n20202705.csv.gz\n"
+            "data": "http://data.insideairbnb.com/singapore/sg/singapore/2020-10-26/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2020-06-22/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2020-05-27/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2020-04-26/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2020-03-21/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2020-02-27/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2020-01-26/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-12-28/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-11-26/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-10-25/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-09-25/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-08-28/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-07-21/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-06-25/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-05-23/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-04-20/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-03-18/data/listings.csv.gz\n"
           }
         ]
       },
       "apps": [],
-      "jobName": "paragraph_1609459709067_1180017470",
-      "id": "20210101-000829_1764816744",
-      "dateCreated": "Jan 1, 2021 12:08:29 AM",
-      "dateStarted": "Jan 1, 2021 12:09:24 AM",
-      "dateFinished": "Jan 1, 2021 12:09:24 AM",
+      "jobName": "paragraph_1609460864164_1746050977",
+      "id": "20210101-002744_280668179",
+      "dateCreated": "Jan 1, 2021 12:27:44 AM",
+      "dateStarted": "Jan 1, 2021 1:42:00 AM",
+      "dateFinished": "Jan 1, 2021 1:44:04 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%pyspark\n\nimport os,pandas\n\nprint os.getcwd()\n",
+      "text": "%pyspark\n\ndf.info(verbose\u003dTrue, null_counts\u003dTrue)",
       "user": "anonymous",
-      "dateUpdated": "Jan 1, 2021 12:10:15 AM",
+      "dateUpdated": "Jan 1, 2021 1:50:34 AM",
+      "config": {
+        "colWidth": 3.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 514.0,
+              "optionOpen": false
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "python"
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u003cclass \u0027pandas.core.frame.DataFrame\u0027\u003e\nInt64Index: 130068 entries, 0 to 7974\nData columns (total 108 columns):\naccess                                          79883 non-null object\naccommodates                                    130068 non-null int64\namenities                                       130068 non-null object\navailability_30                                 130068 non-null int64\navailability_365                                130068 non-null int64\navailability_60                                 130068 non-null int64\navailability_90                                 130068 non-null int64\nbathrooms                                       125498 non-null float64\nbathrooms_text                                  4478 non-null object\nbed_type                                        125576 non-null object\nbedrooms                                        129589 non-null float64\nbeds                                            129494 non-null float64\ncalculated_host_listings_count                  130068 non-null int64\ncalculated_host_listings_count_entire_homes     130068 non-null int64\ncalculated_host_listings_count_private_rooms    130068 non-null int64\ncalculated_host_listings_count_shared_rooms     130068 non-null int64\ncalendar_last_scraped                           130068 non-null object\ncalendar_updated                                125576 non-null object\ncancellation_policy                             125576 non-null object\ncity                                            124454 non-null object\ncleaning_fee                                    91918 non-null object\ncountry                                         125576 non-null object\ncountry_code                                    125576 non-null object\ndescription                                     126967 non-null object\nexperiences_offered                             125576 non-null object\nextra_people                                    125576 non-null object\nfirst_review                                    82200 non-null object\nguests_included                                 125576 non-null float64\nhas_availability                                130068 non-null object\nhost_about                                      84028 non-null object\nhost_acceptance_rate                            34542 non-null object\nhost_has_profile_pic                            129879 non-null object\nhost_id                                         130068 non-null int64\nhost_identity_verified                          129879 non-null object\nhost_is_superhost                               129879 non-null object\nhost_listings_count                             129879 non-null float64\nhost_location                                   129568 non-null object\nhost_name                                       129879 non-null object\nhost_neighbourhood                              114443 non-null object\nhost_picture_url                                129879 non-null object\nhost_response_rate                              105921 non-null object\nhost_response_time                              105921 non-null object\nhost_since                                      129879 non-null object\nhost_thumbnail_url                              129879 non-null object\nhost_total_listings_count                       129879 non-null float64\nhost_url                                        130068 non-null object\nhost_verifications                              130068 non-null object\nhouse_rules                                     63146 non-null object\nid                                              130068 non-null int64\ninstant_bookable                                130068 non-null object\ninteraction                                     71851 non-null object\nis_business_travel_ready                        125576 non-null object\nis_location_exact                               125576 non-null object\njurisdiction_names                              5 non-null object\nlast_review                                     82200 non-null object\nlast_scraped                                    130068 non-null object\nlatitude                                        130068 non-null float64\nlicense                                         73 non-null object\nlisting_url                                     130068 non-null object\nlongitude                                       130068 non-null float64\nmarket                                          124091 non-null object\nmaximum_maximum_nights                          130068 non-null int64\nmaximum_minimum_nights                          130068 non-null int64\nmaximum_nights                                  130068 non-null int64\nmaximum_nights_avg_ntm                          130068 non-null float64\nmedium_url                                      0 non-null float64\nminimum_maximum_nights                          130068 non-null int64\nminimum_minimum_nights                          130068 non-null int64\nminimum_nights                                  130068 non-null int64\nminimum_nights_avg_ntm                          130068 non-null float64\nmonthly_price                                   9709 non-null object\nname                                            130040 non-null object\nneighborhood_overview                           77917 non-null object\nneighbourhood                                   128163 non-null object\nneighbourhood_cleansed                          130068 non-null object\nneighbourhood_group_cleansed                    130068 non-null object\nnotes                                           72088 non-null object\nnumber_of_reviews                               130068 non-null int64\nnumber_of_reviews_l30d                          4492 non-null float64\nnumber_of_reviews_ltm                           130068 non-null int64\npicture_url                                     130068 non-null object\nprice                                           130068 non-null object\nproperty_type                                   130068 non-null object\nrequire_guest_phone_verification                125576 non-null object\nrequire_guest_profile_picture                   125576 non-null object\nrequires_license                                125576 non-null object\nreview_scores_accuracy                          79790 non-null float64\nreview_scores_checkin                           79722 non-null float64\nreview_scores_cleanliness                       79829 non-null float64\nreview_scores_communication                     79790 non-null float64\nreview_scores_location                          79710 non-null float64\nreview_scores_rating                            79875 non-null float64\nreview_scores_value                             79722 non-null float64\nreviews_per_month                               82200 non-null float64\nroom_type                                       130068 non-null object\nscrape_id                                       130068 non-null int64\nsecurity_deposit                                88336 non-null object\nsmart_location                                  125576 non-null object\nspace                                           92657 non-null object\nsquare_feet                                     687 non-null float64\nstate                                           10327 non-null object\nstreet                                          125576 non-null object\nsummary                                         121097 non-null object\nthumbnail_url                                   0 non-null float64\ntransit                                         75163 non-null object\nweekly_price                                    8495 non-null object\nxl_picture_url                                  0 non-null float64\nzipcode                                         111931 non-null object\ndtypes: float64(23), int64(20), object(65)\nmemory usage: 108.2+ MB\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1609464326974_-978652675",
+      "id": "20210101-012526_1370460239",
+      "dateCreated": "Jan 1, 2021 1:25:26 AM",
+      "dateStarted": "Jan 1, 2021 1:49:56 AM",
+      "dateFinished": "Jan 1, 2021 1:49:57 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n\nimport os\nimport pandas as pd\n\nairbnbcsvarr \u003d [os.path.join(z.get(\"WORKPATH\"), file) for file in os.listdir(z.get(\"WORKPATH\")) if file.endswith(\u0027.gz\u0027)]\nprint \u0027\\n\u0027.join(airbnbcsvarr)",
+      "user": "anonymous",
+      "dateUpdated": "Jan 1, 2021 12:37:54 AM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -55,11 +160,11 @@
         "forms": {}
       },
       "results": {
-        "code": "ERROR",
+        "code": "SUCCESS",
         "msg": [
           {
             "type": "TEXT",
-            "data": "Traceback (most recent call last):\n  File \"/tmp/zeppelin_pyspark-4114371156265096997.py\", line 367, in \u003cmodule\u003e\n    raise Exception(traceback.format_exc())\nException: Traceback (most recent call last):\n  File \"/tmp/zeppelin_pyspark-4114371156265096997.py\", line 355, in \u003cmodule\u003e\n    exec(code, _zcUserQueryNameSpace)\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\nImportError: No module named pandas\n\n"
+            "data": "/usr/hdp/current/zeppelin-server/komputerawangan/assignment1/20192510.csv.gz\n/usr/hdp/current/zeppelin-server/komputerawangan/assignment1/20202601.csv.gz\n/usr/hdp/current/zeppelin-server/komputerawangan/assignment1/20192305.csv.gz\n/usr/hdp/current/zeppelin-server/komputerawangan/assignment1/20192509.csv.gz\n/usr/hdp/current/zeppelin-server/komputerawangan/assignment1/20202705.csv.gz\n/usr/hdp/current/zeppelin-server/komputerawangan/assignment1/20192611.csv.gz\n/usr/hdp/current/zeppelin-server/komputerawangan/assignment1/20192812.csv.gz\n/usr/hdp/current/zeppelin-server/komputerawangan/assignment1/20202103.csv.gz\n/usr/hdp/current/zeppelin-server/komputerawangan/assignment1/20202604.csv.gz\n/usr/hdp/current/zeppelin-server/komputerawangan/assignment1/20192004.csv.gz\n/usr/hdp/current/zeppelin-server/komputerawangan/assignment1/20202610.csv.gz\n/usr/hdp/current/zeppelin-server/komputerawangan/assignment1/20202702.csv.gz\n/usr/hdp/current/zeppelin-server/komputerawangan/assignment1/20192107.csv.gz\n/usr/hdp/current/zeppelin-server/komputerawangan/assignment1/20192506.csv.gz\n/usr/hdp/current/zeppelin-server/komputerawangan/assignment1/20192808.csv.gz\n/usr/hdp/current/zeppelin-server/komputerawangan/assignment1/20202206.csv.gz\n/usr/hdp/current/zeppelin-server/komputerawangan/assignment1/20191803.csv.gz\n"
           }
         ]
       },
@@ -67,24 +172,124 @@
       "jobName": "paragraph_1609459736420_918803615",
       "id": "20210101-000856_130370505",
       "dateCreated": "Jan 1, 2021 12:08:56 AM",
-      "dateStarted": "Jan 1, 2021 12:10:15 AM",
-      "dateFinished": "Jan 1, 2021 12:10:58 AM",
-      "status": "ERROR",
+      "dateStarted": "Jan 1, 2021 12:37:54 AM",
+      "dateFinished": "Jan 1, 2021 12:37:54 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n#lambda p: myFunc(p, additionalArgument)\ndf \u003d pd.concat(map(lambda file: pd.read_csv(file, low_memory\u003dFalse), airbnburlgrab()))",
+      "user": "anonymous",
+      "dateUpdated": "Jan 1, 2021 1:30:37 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python"
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1609459815923_2116465644",
+      "id": "20210101-001015_1719729192",
+      "dateCreated": "Jan 1, 2021 12:10:15 AM",
+      "dateStarted": "Jan 1, 2021 1:30:37 AM",
+      "dateFinished": "Jan 1, 2021 1:32:32 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n\ndf.info()",
+      "user": "anonymous",
+      "dateUpdated": "Jan 1, 2021 1:32:39 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python"
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u003cclass \u0027pandas.core.frame.DataFrame\u0027\u003e\nInt64Index: 130068 entries, 0 to 7974\nColumns: 108 entries, access to zipcode\ndtypes: float64(23), int64(20), object(65)\nmemory usage: 108.2+ MB\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1609461373897_673291133",
+      "id": "20210101-003613_2050045915",
+      "dateCreated": "Jan 1, 2021 12:36:13 AM",
+      "dateStarted": "Jan 1, 2021 1:32:39 AM",
+      "dateFinished": "Jan 1, 2021 1:32:39 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\npd.read_csv(df[0]).info()",
+      "user": "anonymous",
+      "dateUpdated": "Jan 1, 2021 1:25:57 AM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python"
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u003cclass \u0027pandas.core.frame.DataFrame\u0027\u003e\nRangeIndex: 4492 entries, 0 to 4491\nData columns (total 74 columns):\nid                                              4492 non-null int64\nlisting_url                                     4492 non-null object\nscrape_id                                       4492 non-null int64\nlast_scraped                                    4492 non-null object\nname                                            4492 non-null object\ndescription                                     4329 non-null object\nneighborhood_overview                           2961 non-null object\npicture_url                                     4492 non-null object\nhost_id                                         4492 non-null int64\nhost_url                                        4492 non-null object\nhost_name                                       4490 non-null object\nhost_since                                      4490 non-null object\nhost_location                                   4488 non-null object\nhost_about                                      3208 non-null object\nhost_response_time                              3893 non-null object\nhost_response_rate                              3893 non-null object\nhost_acceptance_rate                            3871 non-null object\nhost_is_superhost                               4490 non-null object\nhost_thumbnail_url                              4490 non-null object\nhost_picture_url                                4490 non-null object\nhost_neighbourhood                              4066 non-null object\nhost_listings_count                             4490 non-null float64\nhost_total_listings_count                       4490 non-null float64\nhost_verifications                              4492 non-null object\nhost_has_profile_pic                            4490 non-null object\nhost_identity_verified                          4490 non-null object\nneighbourhood                                   2961 non-null object\nneighbourhood_cleansed                          4492 non-null object\nneighbourhood_group_cleansed                    4492 non-null object\nlatitude                                        4492 non-null float64\nlongitude                                       4492 non-null float64\nproperty_type                                   4492 non-null object\nroom_type                                       4492 non-null object\naccommodates                                    4492 non-null int64\nbathrooms                                       0 non-null float64\nbathrooms_text                                  4478 non-null object\nbedrooms                                        4106 non-null float64\nbeds                                            4437 non-null float64\namenities                                       4492 non-null object\nprice                                           4492 non-null object\nminimum_nights                                  4492 non-null int64\nmaximum_nights                                  4492 non-null int64\nminimum_minimum_nights                          4492 non-null int64\nmaximum_minimum_nights                          4492 non-null int64\nminimum_maximum_nights                          4492 non-null int64\nmaximum_maximum_nights                          4492 non-null int64\nminimum_nights_avg_ntm                          4492 non-null float64\nmaximum_nights_avg_ntm                          4492 non-null float64\ncalendar_updated                                0 non-null float64\nhas_availability                                4492 non-null object\navailability_30                                 4492 non-null int64\navailability_60                                 4492 non-null int64\navailability_90                                 4492 non-null int64\navailability_365                                4492 non-null int64\ncalendar_last_scraped                           4492 non-null object\nnumber_of_reviews                               4492 non-null int64\nnumber_of_reviews_ltm                           4492 non-null int64\nnumber_of_reviews_l30d                          4492 non-null int64\nfirst_review                                    2693 non-null object\nlast_review                                     2693 non-null object\nreview_scores_rating                            2630 non-null float64\nreview_scores_accuracy                          2626 non-null float64\nreview_scores_cleanliness                       2627 non-null float64\nreview_scores_checkin                           2626 non-null float64\nreview_scores_communication                     2626 non-null float64\nreview_scores_location                          2625 non-null float64\nreview_scores_value                             2625 non-null float64\nlicense                                         0 non-null float64\ninstant_bookable                                4492 non-null object\ncalculated_host_listings_count                  4492 non-null int64\ncalculated_host_listings_count_entire_homes     4492 non-null int64\ncalculated_host_listings_count_private_rooms    4492 non-null int64\ncalculated_host_listings_count_shared_rooms     4492 non-null int64\nreviews_per_month                               2693 non-null float64\ndtypes: float64(19), int64(21), object(34)\nmemory usage: 2.5+ MB\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1609461505466_107280052",
+      "id": "20210101-003825_910951674",
+      "dateCreated": "Jan 1, 2021 12:38:25 AM",
+      "dateStarted": "Jan 1, 2021 1:25:57 AM",
+      "dateFinished": "Jan 1, 2021 1:26:01 AM",
+      "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\n",
       "user": "anonymous",
-      "dateUpdated": "Jan 1, 2021 12:10:15 AM",
+      "dateUpdated": "Jan 1, 2021 12:42:27 AM",
       "config": {},
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1609459815923_2116465644",
-      "id": "20210101-001015_1719729192",
-      "dateCreated": "Jan 1, 2021 12:10:15 AM",
+      "jobName": "paragraph_1609461747745_-505287814",
+      "id": "20210101-004227_1529361669",
+      "dateCreated": "Jan 1, 2021 12:42:27 AM",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }
