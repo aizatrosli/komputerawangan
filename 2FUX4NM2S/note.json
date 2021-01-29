@@ -3,9 +3,9 @@
     {
       "text": "%md\n\n\n\n\n![Alt Text](https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/512px-Airbnb_Logo_B%C3%A9lo.svg.png)\n### **AIRBNB SINGAPORE LISTING ANALYSIS** ###\n\n[InsideAirbnb Singapore Listings dataset](http://insideairbnb.com/get-the-data.html)\n[InsideAirbnb Singapore Visualization example](http://insideairbnb.com/singapore/)\n[Github notebook](https://github.com/aizatrosli/komputerawangan)\n[ASFA Analytics](https://abualfateh2901.wixsite.com/afsaanalytics)",
       "user": "anonymous",
-      "dateUpdated": "Jan 29, 2021 4:58:24 PM",
+      "dateUpdated": "Jan 29, 2021 6:11:30 PM",
       "config": {
-        "colWidth": 9.0,
+        "colWidth": 12.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
@@ -33,15 +33,15 @@
       "jobName": "paragraph_1609459709067_1180017470",
       "id": "20210101-000829_1764816744",
       "dateCreated": "Jan 1, 2021 12:08:29 AM",
-      "dateStarted": "Jan 29, 2021 4:58:24 PM",
-      "dateFinished": "Jan 29, 2021 4:58:24 PM",
+      "dateStarted": "Jan 29, 2021 6:11:30 PM",
+      "dateFinished": "Jan 29, 2021 6:11:30 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "z.put(\"WORKPATH\", \"/usr/hdp/current/zeppelin-server/komputerawangan/assignment1\")\nz.put(\"BIGCSV\", \"listings.csv\")\nz.put(\"COUNTRY\", \"singapore\")\nz.put(\"DATASET\", \"listings\")\n",
+      "text": "//Assign global variable in notebook\n\n\n\n\n\n\n\n\n\n\n\n\nz.put(\"WORKPATH\", \"/usr/hdp/current/zeppelin-server/komputerawangan/assignment1\")\nz.put(\"BIGCSV\", \"listings.csv\")\nz.put(\"COUNTRY\", \"singapore\")\nz.put(\"DATASET\", \"listings\")\n",
       "user": "anonymous",
-      "dateUpdated": "Jan 29, 2021 4:46:41 PM",
+      "dateUpdated": "Jan 29, 2021 6:11:32 PM",
       "config": {
         "colWidth": 3.0,
         "enabled": true,
@@ -64,17 +64,17 @@
       "jobName": "paragraph_1609465874643_459360281",
       "id": "20210101-015114_836921952",
       "dateCreated": "Jan 1, 2021 1:51:14 AM",
-      "dateStarted": "Jan 29, 2021 4:46:41 PM",
-      "dateFinished": "Jan 29, 2021 4:46:42 PM",
+      "dateStarted": "Jan 29, 2021 6:11:32 PM",
+      "dateFinished": "Jan 29, 2021 6:11:33 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md\n\n## **Zeppelin** ##\n\n **Data Ingestion | Data Discovery | Data Analytics | Data Visualization \u0026 Collaboration**\n \nAllows any language/data-processing-backend to be plugged into Zeppelin. Currently Apache Zeppelin supports many interpreters such as Apache Spark, Python, JDBC, Markdown and Shell.",
+      "text": "%md\n\n## **Zeppelin** ##\n\n\n\n **Data Ingestion | Data Discovery | Data Analytics | Data Visualization \u0026 Collaboration**\n \n \n \nAllows any language/data-processing-backend to be plugged into Zeppelin. Currently Apache Zeppelin supports many interpreters such as Apache Spark, Python, JDBC, Markdown and Shell.\n\n## **Overview** ##\n\nTools used in this project",
       "user": "anonymous",
-      "dateUpdated": "Jan 29, 2021 5:05:19 PM",
+      "dateUpdated": "Jan 29, 2021 6:11:35 PM",
       "config": {
-        "colWidth": 3.0,
+        "colWidth": 4.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
@@ -94,7 +94,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003ch2\u003e\u003cstrong\u003eZeppelin\u003c/strong\u003e\u003c/h2\u003e\n\u003cp\u003e\u003cstrong\u003eData Ingestion | Data Discovery | Data Analytics | Data Visualization \u0026amp; Collaboration\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003eAllows any language/data-processing-backend to be plugged into Zeppelin. Currently Apache Zeppelin supports many interpreters such as Apache Spark, Python, JDBC, Markdown and Shell.\u003c/p\u003e\n"
+            "data": "\u003ch2\u003e\u003cstrong\u003eZeppelin\u003c/strong\u003e\u003c/h2\u003e\n\u003cp\u003e\u003cstrong\u003eData Ingestion | Data Discovery | Data Analytics | Data Visualization \u0026amp; Collaboration\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003eAllows any language/data-processing-backend to be plugged into Zeppelin. Currently Apache Zeppelin supports many interpreters such as Apache Spark, Python, JDBC, Markdown and Shell.\u003c/p\u003e\n\u003ch2\u003e\u003cstrong\u003eOverview\u003c/strong\u003e\u003c/h2\u003e\n\u003cp\u003eTools used in this project\u003c/p\u003e\n"
           }
         ]
       },
@@ -102,8 +102,46 @@
       "jobName": "paragraph_1611937643769_1093186582",
       "id": "20210129-162723_615830543",
       "dateCreated": "Jan 29, 2021 4:27:23 PM",
-      "dateStarted": "Jan 29, 2021 5:05:19 PM",
-      "dateFinished": "Jan 29, 2021 5:05:19 PM",
+      "dateStarted": "Jan 29, 2021 6:11:35 PM",
+      "dateFinished": "Jan 29, 2021 6:11:35 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n![dsads](https://i.ibb.co/6b6BSNy/overview.png)",
+      "user": "anonymous",
+      "dateUpdated": "Jan 29, 2021 6:14:13 PM",
+      "config": {
+        "colWidth": 5.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cp\u003e\u003cimg src\u003d\"https://i.ibb.co/6b6BSNy/overview.png\" alt\u003d\"dsads\" /\u003e\u003c/p\u003e\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1611941279544_1816265212",
+      "id": "20210129-172759_135095319",
+      "dateCreated": "Jan 29, 2021 5:27:59 PM",
+      "dateStarted": "Jan 29, 2021 6:14:13 PM",
+      "dateFinished": "Jan 29, 2021 6:14:13 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -186,7 +224,7 @@
     {
       "text": "%pyspark\n\nfrom urllib2 import urlopen\nimport pandas as pd\nimport re, os\n\ndef airbnburlminer(country\u003d\u0027singapore\u0027, dataset\u003d\u0027listings\u0027, ext\u003d\u0027.csv.gz\u0027):\n    page \u003d urlopen(\u0027http://insideairbnb.com/get-the-data.html\u0027)\n    html \u003d page.read().decode(\"utf-8\")\n    urlarr \u003d [str(re.sub(\u0027\u003ca href\u003d\".*?\u0027, \"\", csvfile)).replace(\u0027\"\u0027,\u0027\u0027) for csvfile in re.findall(\u0027\u003ca href\u003d\".*{}.*?{}{}\"\u0027.format(country,dataset,ext), html)]\n    print(\u0027\\n\u0027.join(urlarr))\n    return pd.concat(map(lambda file: pd.read_csv(file, low_memory\u003dFalse), urlarr))\n    \n#mining insiderairbnb page \ndf \u003d airbnburlminer()\ndf \u003d df.drop_duplicates()\n#remove any duplicate rows\n\n\n",
       "user": "anonymous",
-      "dateUpdated": "Jan 29, 2021 5:07:01 PM",
+      "dateUpdated": "Jan 29, 2021 6:11:41 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -214,15 +252,15 @@
       "jobName": "paragraph_1609460864164_1746050977",
       "id": "20210101-002744_280668179",
       "dateCreated": "Jan 1, 2021 12:27:44 AM",
-      "dateStarted": "Jan 29, 2021 3:08:10 PM",
-      "dateFinished": "Jan 29, 2021 3:11:18 PM",
+      "dateStarted": "Jan 29, 2021 6:11:41 PM",
+      "dateFinished": "Jan 29, 2021 6:15:08 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\n\ndf.info(verbose\u003dTrue, null_counts\u003dTrue)",
       "user": "anonymous",
-      "dateUpdated": "Jan 29, 2021 3:13:44 PM",
+      "dateUpdated": "Jan 29, 2021 6:29:32 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -258,15 +296,15 @@
       "jobName": "paragraph_1609464326974_-978652675",
       "id": "20210101-012526_1370460239",
       "dateCreated": "Jan 1, 2021 1:25:26 AM",
-      "dateStarted": "Jan 29, 2021 3:13:44 PM",
-      "dateFinished": "Jan 29, 2021 3:13:45 PM",
+      "dateStarted": "Jan 29, 2021 6:29:32 PM",
+      "dateFinished": "Jan 29, 2021 6:29:33 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\n# Data cleaning / remove null values\nnulldf \u003d pd.isnull(df).sum()/len(df)\nnulldf \u003d pd.DataFrame(nulldf.sort_values(ascending\u003dFalse),columns\u003d[\"null_values\"])\nreviewarr \u003d [col for col in df.columns.tolist() if \"review_scores\" in col]\nnullcol \u003d [col for col in nulldf[nulldf[\u0027null_values\u0027] \u003e 0].index.tolist() if col not in [\u0027beds\u0027,\u0027bathrooms\u0027,\u0027bedrooms\u0027]+reviewarr]\nairbnbdf \u003d df.drop(axis\u003d1, columns\u003dnullcol)\nairbnbdf \u003d airbnbdf.dropna(how\u003d\u0027any\u0027,axis\u003d0)\nairbnbdf \u003d airbnbdf.fillna(0,axis\u003d1)",
       "user": "anonymous",
-      "dateUpdated": "Jan 29, 2021 5:06:06 PM",
+      "dateUpdated": "Jan 29, 2021 6:29:35 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -289,15 +327,15 @@
       "jobName": "paragraph_1609471996037_-5003006",
       "id": "20210101-033316_547324878",
       "dateCreated": "Jan 1, 2021 3:33:16 AM",
-      "dateStarted": "Jan 29, 2021 3:13:49 PM",
-      "dateFinished": "Jan 29, 2021 3:13:51 PM",
+      "dateStarted": "Jan 29, 2021 6:29:35 PM",
+      "dateFinished": "Jan 29, 2021 6:29:36 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%pyspark\n\ndel df, nulldf\nairbnbdf.info()\nairbnbdf.to_csv(os.path.join(z.get(\u0027WORKPATH\u0027),z.get(\u0027BIGCSV\u0027)), index\u003dFalse)",
+      "text": "%pyspark\n# Generate CSV file for other app\ndel df, nulldf\nairbnbdf.info()\nairbnbdf.to_csv(os.path.join(z.get(\u0027WORKPATH\u0027),z.get(\u0027BIGCSV\u0027)), index\u003dFalse)",
       "user": "anonymous",
-      "dateUpdated": "Jan 29, 2021 3:13:53 PM",
+      "dateUpdated": "Jan 29, 2021 6:29:38 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -333,31 +371,16 @@
       "jobName": "paragraph_1609472032579_-613428935",
       "id": "20210101-033352_50327176",
       "dateCreated": "Jan 1, 2021 3:33:52 AM",
-      "dateStarted": "Jan 29, 2021 3:13:53 PM",
-      "dateFinished": "Jan 29, 2021 3:13:56 PM",
+      "dateStarted": "Jan 29, 2021 6:29:38 PM",
+      "dateFinished": "Jan 29, 2021 6:29:42 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%pyspark\n",
-      "user": "anonymous",
-      "dateUpdated": "Jan 29, 2021 3:15:09 PM",
-      "config": {},
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "apps": [],
-      "jobName": "paragraph_1611933309186_240040693",
-      "id": "20210129-151509_1172969634",
-      "dateCreated": "Jan 29, 2021 3:15:09 PM",
-      "status": "READY",
-      "progressUpdateIntervalMs": 500
-    },
-    {
+      "title": "From Pandas DataFrame to Hive table using pySpark",
       "text": "%pyspark\n\nspark.sql(\u0027DROP TABLE IF EXISTS default.singapore_listings\u0027)\npdf \u003d spark.createDataFrame(airbnbdf)\npdf.write.saveAsTable(\u0027singapore_listings_new\u0027)\nprint pdf.printSchema()\ndel pdf, airbnbdf\n",
       "user": "anonymous",
-      "dateUpdated": "Jan 29, 2021 3:13:58 PM",
+      "dateUpdated": "Jan 29, 2021 6:29:41 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -366,18 +389,19 @@
           "language": "python",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/python"
+        "editorMode": "ace/mode/python",
+        "title": true
       },
       "settings": {
         "params": {},
         "forms": {}
       },
       "results": {
-        "code": "SUCCESS",
+        "code": "ERROR",
         "msg": [
           {
             "type": "TEXT",
-            "data": "root\n |-- accommodates: long (nullable \u003d true)\n |-- amenities: string (nullable \u003d true)\n |-- availability_30: long (nullable \u003d true)\n |-- availability_365: long (nullable \u003d true)\n |-- availability_60: long (nullable \u003d true)\n |-- availability_90: long (nullable \u003d true)\n |-- bathrooms: double (nullable \u003d true)\n |-- bedrooms: double (nullable \u003d true)\n |-- beds: double (nullable \u003d true)\n |-- calculated_host_listings_count: long (nullable \u003d true)\n |-- calculated_host_listings_count_entire_homes: long (nullable \u003d true)\n |-- calculated_host_listings_count_private_rooms: long (nullable \u003d true)\n |-- calculated_host_listings_count_shared_rooms: long (nullable \u003d true)\n |-- calendar_last_scraped: string (nullable \u003d true)\n |-- has_availability: string (nullable \u003d true)\n |-- host_id: long (nullable \u003d true)\n |-- host_url: string (nullable \u003d true)\n |-- host_verifications: string (nullable \u003d true)\n |-- id: long (nullable \u003d true)\n |-- instant_bookable: string (nullable \u003d true)\n |-- last_scraped: string (nullable \u003d true)\n |-- latitude: double (nullable \u003d true)\n |-- listing_url: string (nullable \u003d true)\n |-- longitude: double (nullable \u003d true)\n |-- maximum_maximum_nights: long (nullable \u003d true)\n |-- maximum_minimum_nights: long (nullable \u003d true)\n |-- maximum_nights: long (nullable \u003d true)\n |-- maximum_nights_avg_ntm: double (nullable \u003d true)\n |-- minimum_maximum_nights: long (nullable \u003d true)\n |-- minimum_minimum_nights: long (nullable \u003d true)\n |-- minimum_nights: long (nullable \u003d true)\n |-- minimum_nights_avg_ntm: double (nullable \u003d true)\n |-- neighbourhood_cleansed: string (nullable \u003d true)\n |-- neighbourhood_group_cleansed: string (nullable \u003d true)\n |-- number_of_reviews: long (nullable \u003d true)\n |-- number_of_reviews_ltm: long (nullable \u003d true)\n |-- picture_url: string (nullable \u003d true)\n |-- price: string (nullable \u003d true)\n |-- property_type: string (nullable \u003d true)\n |-- review_scores_accuracy: double (nullable \u003d true)\n |-- review_scores_checkin: double (nullable \u003d true)\n |-- review_scores_cleanliness: double (nullable \u003d true)\n |-- review_scores_communication: double (nullable \u003d true)\n |-- review_scores_location: double (nullable \u003d true)\n |-- review_scores_rating: double (nullable \u003d true)\n |-- review_scores_value: double (nullable \u003d true)\n |-- room_type: string (nullable \u003d true)\n |-- scrape_id: long (nullable \u003d true)\n\nNone\n"
+            "data": "Traceback (most recent call last):\n  File \"/tmp/zeppelin_pyspark-1865268459648433852.py\", line 367, in \u003cmodule\u003e\n    raise Exception(traceback.format_exc())\nException: Traceback (most recent call last):\n  File \"/tmp/zeppelin_pyspark-1865268459648433852.py\", line 355, in \u003cmodule\u003e\n    exec(code, _zcUserQueryNameSpace)\n  File \"\u003cstdin\u003e\", line 3, in \u003cmodule\u003e\n  File \"/usr/hdp/current/spark2-client/python/pyspark/sql/readwriter.py\", line 744, in saveAsTable\n    self._jwrite.saveAsTable(name)\n  File \"/usr/hdp/current/spark2-client/python/lib/py4j-0.10.6-src.zip/py4j/java_gateway.py\", line 1160, in __call__\n    answer, self.gateway_client, self.target_id, self.name)\n  File \"/usr/hdp/current/spark2-client/python/pyspark/sql/utils.py\", line 69, in deco\n    raise AnalysisException(s.split(\u0027: \u0027, 1)[1], stackTrace)\nAnalysisException: u\u0027Table `singapore_listings_new` already exists.;\u0027\n\n"
           }
         ]
       },
@@ -385,15 +409,15 @@
       "jobName": "paragraph_1609472483162_-1053939066",
       "id": "20210101-034123_1744419250",
       "dateCreated": "Jan 1, 2021 3:41:23 AM",
-      "dateStarted": "Jan 29, 2021 3:13:58 PM",
-      "dateFinished": "Jan 29, 2021 3:14:56 PM",
-      "status": "FINISHED",
+      "dateStarted": "Jan 29, 2021 6:29:41 PM",
+      "dateFinished": "Jan 29, 2021 6:30:31 PM",
+      "status": "ERROR",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n\n#### **Delete HDFS file** ####\n\ndelete a directory on the file system\n\n````bash\nhadoop fs -rm -r -f {output hdfs}\n````",
       "user": "anonymous",
-      "dateUpdated": "Jan 29, 2021 3:08:23 PM",
+      "dateUpdated": "Jan 29, 2021 5:47:38 PM",
       "config": {
         "colWidth": 3.0,
         "enabled": true,
@@ -423,8 +447,8 @@
       "jobName": "paragraph_1611932763542_-22521166",
       "id": "20210129-150603_585668038",
       "dateCreated": "Jan 29, 2021 3:06:03 PM",
-      "dateStarted": "Jan 29, 2021 3:06:35 PM",
-      "dateFinished": "Jan 29, 2021 3:06:35 PM",
+      "dateStarted": "Jan 29, 2021 5:47:38 PM",
+      "dateFinished": "Jan 29, 2021 5:47:38 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -543,17 +567,18 @@
       "progressUpdateIntervalMs": 500
     },
     {
+      "title": "Add listings.csv into hdfs folder",
       "text": "%sh\n\nhadoop fs -rm -r -f /sglistings\nhadoop fs -mkdir /sglistings\nhadoop fs -put /usr/hdp/current/zeppelin-server/komputerawangan/assignment1/listings.csv /sglistings\nhadoop fs -ls /sglistings",
       "user": "anonymous",
-      "dateUpdated": "Jan 29, 2021 3:25:18 PM",
+      "dateUpdated": "Jan 29, 2021 5:50:00 PM",
       "config": {
-        "colWidth": 4.0,
+        "colWidth": 12.0,
         "enabled": true,
         "results": {
           "0": {
             "graph": {
               "mode": "table",
-              "height": 254.0,
+              "height": 354.0,
               "optionOpen": false
             }
           }
@@ -562,7 +587,8 @@
           "language": "sh",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/sh"
+        "editorMode": "ace/mode/sh",
+        "title": true
       },
       "settings": {
         "params": {},
@@ -587,18 +613,20 @@
       "progressUpdateIntervalMs": 500
     },
     {
+      "title": "From HDFS to Hive using pySpark",
       "text": "%pyspark\nfrom pyspark.sql import SparkSession\n\nspark.sql(\u0027DROP TABLE IF EXISTS default.singapore_listings_old\u0027)\nsparkSession \u003d SparkSession.builder.appName(\"sglistingssparkold\").getOrCreate()\nsdf \u003d sparkSession.read.csv(\u0027hdfs://sandbox-hdp.hortonworks.com:8020/sglistings/listings.csv\u0027,header\u003d\u0027true\u0027)\nsdf.write.saveAsTable(\u0027singapore_listings_old\u0027)\nprint sdf.printSchema()\n\ndel sdf",
       "user": "anonymous",
-      "dateUpdated": "Jan 29, 2021 3:24:51 PM",
+      "dateUpdated": "Jan 29, 2021 6:14:23 PM",
       "config": {
-        "colWidth": 4.0,
+        "colWidth": 12.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
           "language": "python",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/python"
+        "editorMode": "ace/mode/python",
+        "title": true
       },
       "settings": {
         "params": {},
@@ -623,9 +651,48 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%sh\n\necho \"sgcsvlisting \u003d load \u0027hdfs://sandbox-hdp.hortonworks.com:8020/sglistings/listings.csv\u0027 using PigStorage(\u0027,\u0027) as\n(accommodates:Long, amenities:chararray, availability_30:Long, availability_365:Long, availability_60:Long, availability_90:Long, bathrooms:Int, bedrooms:Int, beds:Int, calculated_host_listings_count:Long, calculated_host_listings_count_entire_homes:Long, calculated_host_listings_count_private_rooms:Long, calculated_host_listings_count_shared_rooms:Long, calendar_last_scraped:chararray, has_availability:chararray, host_id:Long, host_url:chararray, host_verifications:chararray, id:Long, instant_bookable:chararray, last_scraped:chararray, latitude:Double, listing_url:chararray, longitude:Double, maximum_maximum_nights:Long, maximum_minimum_nights:Long, maximum_nights:Long, maximum_nights_avg_ntm:Double, minimum_maximum_nights:Long, minimum_minimum_nights:Long, minimum_nights:Long, minimum_nights_avg_ntm:Double, neighbourhood_cleansed:chararray, neighbourhood_group_cleansed:chararray, number_of_reviews:Long, number_of_reviews_ltm:Long, picture_url:chararray, price:chararray, property_type:chararray, review_scores_accuracy:Double, review_scores_checkin:Double, review_scores_cleanliness:Double, review_scores_communication:Double, review_scores_location:Double, review_scores_rating:Double, review_scores_value:Double, room_type:chararray, scrape_id:Long);\nSTORE sgcsvlisting into \u0027singapore_listings_pig\u0027 USING  org.apache.hive.hcatalog.pig.HCatStorer();\" \u003e sglisting.pig\n#\u0027singapore_listings_pig\u0027 USING  org.apache.hive.hcatalog.pig.HCatStorer();\n#hdfs://localhost:9000/pig_Output/ \u0027 USING PigStorage (\u0027,\u0027)\n\npig -useHCatalog sglisting.pig\n",
+      "title": "Blank Hive Table",
+      "text": "%jdbc(hive)\n\nCREATE EXTERNAL TABLE IF NOT EXISTS singapore_listings_hivepig(\naccommodates BIGINT,\namenities string,\navailability_30 BIGINT,\navailability_365 BIGINT,\navailability_60 BIGINT,\navailability_90 BIGINT,\nbathrooms DOUBLE,\nbedrooms DOUBLE,\nbeds DOUBLE,\ncalculated_host_listings_count BIGINT,\ncalculated_host_listings_count_entire_homes BIGINT,\ncalculated_host_listings_count_private_rooms BIGINT,\ncalculated_host_listings_count_shared_rooms BIGINT,\ncalendar_last_scraped string,\nhas_availability string,\nhost_id BIGINT,\nhost_url string,\nhost_verifications string,\nid BIGINT,\ninstant_bookable string,\nlast_scraped string,\nlatitude DOUBLE,\nlisting_url string,\nlongitude DOUBLE,\nmaximum_maximum_nights BIGINT,\nmaximum_minimum_nights BIGINT,\nmaximum_nights BIGINT,\nmaximum_nights_avg_ntm DOUBLE,\nminimum_maximum_nights BIGINT,\nminimum_minimum_nights BIGINT,\nminimum_nights BIGINT,\nminimum_nights_avg_ntm DOUBLE,\nneighbourhood_cleansed string,\nneighbourhood_group_cleansed string,\nnumber_of_reviews BIGINT,\nnumber_of_reviews_ltm BIGINT,\npicture_url string,\nprice string,\nproperty_type string,\nreview_scores_accuracy DOUBLE,\nreview_scores_checkin DOUBLE,\nreview_scores_cleanliness DOUBLE,\nreview_scores_communication DOUBLE,\nreview_scores_location DOUBLE,\nreview_scores_rating DOUBLE,\nreview_scores_value DOUBLE,\nroom_type string,\nscrape_id BIGINT)\nROW FORMAT DELIMITED FIELDS TERMINATED BY \u0027\\t\u0027 STORED AS TextFile LOCATION \"/singapore_listings_hivepig\"",
       "user": "anonymous",
-      "dateUpdated": "Jan 29, 2021 4:26:28 PM",
+      "dateUpdated": "Jan 29, 2021 6:28:33 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/sql",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Query executed successfully. Affected rows : -1"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1611944163856_983971787",
+      "id": "20210129-181603_199149216",
+      "dateCreated": "Jan 29, 2021 6:16:03 PM",
+      "dateStarted": "Jan 29, 2021 6:25:36 PM",
+      "dateFinished": "Jan 29, 2021 6:25:37 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "From HDFS to Hive using Pig",
+      "text": "%sh\n\necho \"sgcsvlisting \u003d load \u0027hdfs://sandbox-hdp.hortonworks.com:8020/sglistings/listings.csv\u0027 using PigStorage(\u0027,\u0027) AS (accommodates:Long, amenities:chararray, availability_30:Long, availability_365:Long, availability_60:Long, availability_90:Long, bathrooms:Double, bedrooms:Double, beds:Double, calculated_host_listings_count:Long, calculated_host_listings_count_entire_homes:Long, calculated_host_listings_count_private_rooms:Long, calculated_host_listings_count_shared_rooms:Long, calendar_last_scraped:chararray, has_availability:chararray, host_id:Long, host_url:chararray, host_verifications:chararray, id:Long, instant_bookable:chararray, last_scraped:chararray, latitude:Double, listing_url:chararray, longitude:Double, maximum_maximum_nights:Long, maximum_minimum_nights:Long, maximum_nights:Long, maximum_nights_avg_ntm:Double, minimum_maximum_nights:Long, minimum_minimum_nights:Long, minimum_nights:Long, minimum_nights_avg_ntm:Double, neighbourhood_cleansed:chararray, neighbourhood_group_cleansed:chararray, number_of_reviews:Long, number_of_reviews_ltm:Long, picture_url:chararray, price:chararray, property_type:chararray, review_scores_accuracy:Double, review_scores_checkin:Double, review_scores_cleanliness:Double, review_scores_communication:Double, review_scores_location:Double, review_scores_rating:Double, review_scores_value:Double, room_type:chararray, scrape_id:Long);\n-- DUMP sgcsvlisting;\nSTORE sgcsvlisting INTO \u0027singapore_listings_hivepig\u0027 USING org.apache.hive.hcatalog.pig.HCatStorer();\" \u003e sglisting.pig\n#\u0027singapore_listings_pig\u0027 USING  org.apache.hive.hcatalog.pig.HCatStorer();\n#hdfs://localhost:9000/pig_Output/ \u0027 USING PigStorage (\u0027,\u0027)\n\npig -useHCatalog sglisting.pig\n",
+      "user": "anonymous",
+      "dateUpdated": "Jan 29, 2021 6:32:28 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -634,22 +701,23 @@
           "language": "sh",
           "editOnDblClick": false
         },
-        "editorMode": "ace/mode/sh"
+        "editorMode": "ace/mode/sh",
+        "title": true
       },
       "settings": {
         "params": {},
         "forms": {}
       },
       "results": {
-        "code": "ERROR",
+        "code": "INCOMPLETE",
         "msg": [
           {
             "type": "TEXT",
-            "data": "ls: cannot access /usr/hdp/2.6.5.0-292/hive/lib/slf4j-api-*.jar: No such file or directory\nls: cannot access /usr/hdp/2.6.5.0-292/hive-hcatalog/lib/*hbase-storage-handler-*.jar: No such file or directory\n21/01/29 16:23:34 INFO pig.ExecTypeProvider: Trying ExecType : LOCAL\n21/01/29 16:23:34 INFO pig.ExecTypeProvider: Trying ExecType : MAPREDUCE\n21/01/29 16:23:34 INFO pig.ExecTypeProvider: Trying ExecType : TEZ_LOCAL\n21/01/29 16:23:34 INFO pig.ExecTypeProvider: Trying ExecType : TEZ\n21/01/29 16:23:34 INFO pig.ExecTypeProvider: Picked TEZ as the ExecType\n2021-01-29 16:23:34,213 [main] INFO  org.apache.pig.Main - Apache Pig version 0.16.0.2.6.5.0-292 (rUnversioned directory) compiled May 11 2018, 07:56:28\n2021-01-29 16:23:34,213 [main] INFO  org.apache.pig.Main - Logging error messages to: /usr/hdp/2.6.5.0-292/zeppelin/pig_1611937414211.log\n2021-01-29 16:23:34,871 [main] INFO  org.apache.pig.impl.util.Utils - Default bootup file /home/zeppelin/.pigbootup not found\n2021-01-29 16:23:34,978 [main] INFO  org.apache.pig.backend.hadoop.executionengine.HExecutionEngine - Connecting to hadoop file system at: hdfs://sandbox-hdp.hortonworks.com:8020\n2021-01-29 16:23:35,695 [main] INFO  org.apache.pig.PigServer - Pig Script ID for the session: PIG-sglisting.pig-8da71986-3cfb-407c-987f-51c4074b6ea7\n2021-01-29 16:23:36,042 [main] INFO  org.apache.hadoop.yarn.client.api.impl.TimelineClientImpl - Timeline service address: http://sandbox-hdp.hortonworks.com:8188/ws/v1/timeline/\n2021-01-29 16:23:36,160 [main] INFO  org.apache.pig.backend.hadoop.PigATSClient - Created ATS Hook\n2021-01-29 16:23:36,880 [main] ERROR org.apache.pig.tools.grunt.Grunt - ERROR 1000: Error during parsing. Lexical error at line 4, column 0.  Encountered: \u003cEOF\u003e after : \"\"\nDetails at logfile: /usr/hdp/2.6.5.0-292/zeppelin/pig_1611937414211.log\n2021-01-29 16:23:36,895 [main] INFO  org.apache.pig.Main - Pig script completed in 2 seconds and 879 milliseconds (2879 ms)\n"
+            "data": "ls: cannot access /usr/hdp/2.6.5.0-292/hive/lib/slf4j-api-*.jar: No such file or directory\nls: cannot access /usr/hdp/2.6.5.0-292/hive-hcatalog/lib/*hbase-storage-handler-*.jar: No such file or directory\n21/01/29 18:25:42 INFO pig.ExecTypeProvider: Trying ExecType : LOCAL\n21/01/29 18:25:42 INFO pig.ExecTypeProvider: Trying ExecType : MAPREDUCE\n21/01/29 18:25:42 INFO pig.ExecTypeProvider: Trying ExecType : TEZ_LOCAL\n21/01/29 18:25:42 INFO pig.ExecTypeProvider: Trying ExecType : TEZ\n21/01/29 18:25:42 INFO pig.ExecTypeProvider: Picked TEZ as the ExecType\n2021-01-29 18:25:42,439 [main] INFO  org.apache.pig.Main - Apache Pig version 0.16.0.2.6.5.0-292 (rUnversioned directory) compiled May 11 2018, 07:56:28\n2021-01-29 18:25:42,440 [main] INFO  org.apache.pig.Main - Logging error messages to: /usr/hdp/2.6.5.0-292/zeppelin/pig_1611944742438.log\n2021-01-29 18:25:43,135 [main] INFO  org.apache.pig.impl.util.Utils - Default bootup file /home/zeppelin/.pigbootup not found\n2021-01-29 18:25:43,249 [main] INFO  org.apache.pig.backend.hadoop.executionengine.HExecutionEngine - Connecting to hadoop file system at: hdfs://sandbox-hdp.hortonworks.com:8020\n2021-01-29 18:25:43,998 [main] INFO  org.apache.pig.PigServer - Pig Script ID for the session: PIG-sglisting.pig-61fe29bf-82cd-455f-84b4-983916aadddb\n2021-01-29 18:25:44,389 [main] INFO  org.apache.hadoop.yarn.client.api.impl.TimelineClientImpl - Timeline service address: http://sandbox-hdp.hortonworks.com:8188/ws/v1/timeline/\n2021-01-29 18:25:44,508 [main] INFO  org.apache.pig.backend.hadoop.PigATSClient - Created ATS Hook\n2021-01-29 18:25:45,436 [main] INFO  org.apache.hive.hcatalog.common.HiveClientCache - Initializing cache: eviction-timeout\u003d120 initial-capacity\u003d50 maximum-capacity\u003d50\n2021-01-29 18:25:45,469 [main] INFO  hive.metastore - Trying to connect to metastore with URI thrift://sandbox-hdp.hortonworks.com:9083\n2021-01-29 18:25:45,501 [main] INFO  hive.metastore - Connected to metastore.\n2021-01-29 18:25:46,887 [main] INFO  org.apache.pig.tools.pigstats.ScriptState - Pig features used in the script: UNKNOWN\n2021-01-29 18:25:46,916 [main] INFO  org.apache.pig.data.SchemaTupleBackend - Key [pig.schematuple] was not set... will not generate code.\n2021-01-29 18:25:46,953 [main] INFO  org.apache.pig.newplan.logical.optimizer.LogicalPlanOptimizer - {RULES_ENABLED\u003d[AddForEach, ColumnMapKeyPrune, ConstantCalculator, GroupByConstParallelSetter, LimitOptimizer, LoadTypeCastInserter, MergeFilter, MergeForEach, PartitionFilterOptimizer, PredicatePushdownOptimizer, PushDownForEachFlatten, PushUpFilter, SplitFilter, StreamTypeCastInserter]}\n2021-01-29 18:25:47,029 [main] INFO  org.apache.pig.impl.util.SpillableMemoryManager - Selected heap (PS Old Gen) of size 699400192 to monitor. collectionUsageThreshold \u003d 489580128, usageThreshold \u003d 489580128\n2021-01-29 18:25:47,132 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezLauncher - Tez staging directory is /tmp/zeppelin/staging and resources directory is /tmp/temp-936449712\n2021-01-29 18:25:47,172 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.plan.TezCompiler - File concatenation threshold: 100 optimistic? false\n2021-01-29 18:25:47,266 [main] INFO  org.apache.pig.builtin.PigStorage - Using PigTextInputFormat\n2021-01-29 18:25:47,270 [main] INFO  org.apache.hadoop.mapreduce.lib.input.FileInputFormat - Total input paths to process : 1\n2021-01-29 18:25:47,270 [main] INFO  org.apache.pig.backend.hadoop.executionengine.util.MapRedUtil - Total input paths to process : 1\n2021-01-29 18:25:47,315 [main] INFO  org.apache.pig.backend.hadoop.executionengine.util.MapRedUtil - Total input paths (combined) to process : 1\n2021-01-29 18:25:48,226 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJobCompiler - Local resource: libfb303-0.9.3.jar\n2021-01-29 18:25:48,226 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJobCompiler - Local resource: libthrift-0.9.3.jar\n2021-01-29 18:25:48,226 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJobCompiler - Local resource: pig-0.16.0.2.6.5.0-292-core-h2.jar\n2021-01-29 18:25:48,226 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJobCompiler - Local resource: hive-hcatalog-core-1.2.1000.2.6.5.0-292.jar\n2021-01-29 18:25:48,226 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJobCompiler - Local resource: jdo-api-3.0.1.jar\n2021-01-29 18:25:48,226 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJobCompiler - Local resource: automaton-1.11-8.jar\n2021-01-29 18:25:48,226 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJobCompiler - Local resource: hive-metastore-1.2.1000.2.6.5.0-292.jar\n2021-01-29 18:25:48,226 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJobCompiler - Local resource: antlr-runtime-3.4.jar\n2021-01-29 18:25:48,226 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJobCompiler - Local resource: hive-exec-1.2.1000.2.6.5.0-292.jar\n2021-01-29 18:25:48,226 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJobCompiler - Local resource: hive-hcatalog-pig-adapter-1.2.1000.2.6.5.0-292.jar\n2021-01-29 18:25:48,226 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJobCompiler - Local resource: hive-hbase-handler-1.2.1000.2.6.5.0-292.jar\n2021-01-29 18:25:48,583 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder - For vertex - scope-147: parallelism\u003d1, memory\u003d384, java opts\u003d-Xmx384m\n2021-01-29 18:25:48,583 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder - Processing aliases: sgcsvlisting\n2021-01-29 18:25:48,583 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder - Detailed locations: sgcsvlisting[1,15],sgcsvlisting[-1,-1]\n2021-01-29 18:25:48,583 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezDagBuilder - Pig features in the vertex: \n2021-01-29 18:25:48,743 [main] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezJobCompiler - Total estimated parallelism is 1\n2021-01-29 18:25:48,803 [PigTezLauncher-0] INFO  org.apache.pig.tools.pigstats.tez.TezScriptState - Pig script settings are added to the job\n2021-01-29 18:25:48,804 [PigTezLauncher-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezSessionManager - Increasing tez.am.resource.memory.mb from 384 to 1024 as total estimated tasks \u003d 1, total vertices \u003d 1, max outputs \u003d 1\n2021-01-29 18:25:48,804 [PigTezLauncher-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezSessionManager - Increasing Tez AM Heap Size from 0M to 512M as total estimated tasks \u003d 1, total vertices \u003d 1, max outputs \u003d 1\n2021-01-29 18:25:48,804 [PigTezLauncher-0] INFO  org.apache.pig.backend.hadoop.executionengine.tez.TezSessionManager - Value of tez.am.launch.cmd-opts is now -XX:+PrintGCDetails -verbose:gc -XX:+PrintGCTimeStamps -XX:+UseNUMA -XX:+UseParallelGC -Xmx512M\n2021-01-29 18:25:48,828 [PigTezLauncher-0] INFO  org.apache.tez.client.TezClient - Tez Client Version: [ component\u003dtez-api, version\u003d0.7.0.2.6.5.0-292, revision\u003d2fcfb8aa6a462569e160756dfb73514f99cbf248, SCM-URL\u003dscm:git:https://git-wip-us.apache.org/repos/asf/tez.git, buildTime\u003d2018-05-11T06:44:47Z ]\n2021-01-29 18:25:48,869 [PigTezLauncher-0] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at sandbox-hdp.hortonworks.com/172.18.0.2:8032\n2021-01-29 18:25:49,004 [PigTezLauncher-0] INFO  org.apache.hadoop.yarn.client.AHSProxy - Connecting to Application History server at sandbox-hdp.hortonworks.com/172.18.0.2:10200\n2021-01-29 18:25:49,008 [PigTezLauncher-0] INFO  org.apache.tez.client.TezClient - Session mode. Starting session.\n2021-01-29 18:25:49,011 [PigTezLauncher-0] INFO  org.apache.tez.client.TezClientUtils - Using tez.lib.uris value from configuration: /hdp/apps/2.6.5.0-292/tez/tez.tar.gz\n2021-01-29 18:25:49,058 [PigTezLauncher-0] INFO  org.apache.tez.client.TezClient - Tez system stage directory hdfs://sandbox-hdp.hortonworks.com:8020/tmp/zeppelin/staging/.tez/application_1611928893941_0016 doesn\u0027t exist and is created\n2021-01-29 18:25:49,188 [PigTezLauncher-0] INFO  org.apache.hadoop.yarn.client.api.impl.YarnClientImpl - Submitted application application_1611928893941_0016\n2021-01-29 18:25:49,191 [PigTezLauncher-0] INFO  org.apache.tez.client.TezClient - The url to track the Tez Session: http://sandbox-hdp.hortonworks.com:8088/proxy/application_1611928893941_0016/\n"
           },
           {
             "type": "TEXT",
-            "data": "ExitValue: 8"
+            "data": "Paragraph received a SIGTERM\nExitValue: 143"
           }
         ]
       },
@@ -657,9 +725,9 @@
       "jobName": "paragraph_1611934618565_-1932964208",
       "id": "20210129-153658_498098937",
       "dateCreated": "Jan 29, 2021 3:36:58 PM",
-      "dateStarted": "Jan 29, 2021 4:23:33 PM",
-      "dateFinished": "Jan 29, 2021 4:23:37 PM",
-      "status": "ERROR",
+      "dateStarted": "Jan 29, 2021 6:25:41 PM",
+      "dateFinished": "Jan 29, 2021 6:26:41 PM",
+      "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
