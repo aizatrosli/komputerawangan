@@ -1,9 +1,9 @@
 {
   "paragraphs": [
     {
-      "text": "%md\n\n\n### AIRBNB SG ###",
+      "text": "%md\n\n\n\n\n![Alt Text](https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/512px-Airbnb_Logo_B%C3%A9lo.svg.png)\n### **AIRBNB SINGAPORE LISTING ANALYSIS** ###\n\n[InsideAirbnb Singapore Listings dataset](http://insideairbnb.com/get-the-data.html)\n[InsideAirbnb Singapore Visualization example](http://insideairbnb.com/singapore/)\n[Github notebook](https://github.com/aizatrosli/komputerawangan)\n[ASFA Analytics](https://abualfateh2901.wixsite.com/afsaanalytics)",
       "user": "anonymous",
-      "dateUpdated": "Jan 1, 2021 1:51:57 AM",
+      "dateUpdated": "Jan 29, 2021 4:58:24 PM",
       "config": {
         "colWidth": 9.0,
         "enabled": true,
@@ -25,7 +25,7 @@
         "msg": [
           {
             "type": "HTML",
-            "data": "\u003ch3\u003eAIRBNB SG\u003c/h3\u003e\n"
+            "data": "\u003cp\u003e\u003cimg src\u003d\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/512px-Airbnb_Logo_B%C3%A9lo.svg.png\" alt\u003d\"Alt Text\" /\u003e\u003c/p\u003e\n\u003ch3\u003e\u003cstrong\u003eAIRBNB SINGAPORE LISTING ANALYSIS\u003c/strong\u003e\u003c/h3\u003e\n\u003cp\u003e\u003ca href\u003d\"http://insideairbnb.com/get-the-data.html\"\u003eInsideAirbnb Singapore Listings dataset\u003c/a\u003e\n\u003cbr  /\u003e\u003ca href\u003d\"http://insideairbnb.com/singapore/\"\u003eInsideAirbnb Singapore Visualization example\u003c/a\u003e\n\u003cbr  /\u003e\u003ca href\u003d\"https://github.com/aizatrosli/komputerawangan\"\u003eGithub notebook\u003c/a\u003e\n\u003cbr  /\u003e\u003ca href\u003d\"https://abualfateh2901.wixsite.com/afsaanalytics\"\u003eASFA Analytics\u003c/a\u003e\u003c/p\u003e\n"
           }
         ]
       },
@@ -33,21 +33,22 @@
       "jobName": "paragraph_1609459709067_1180017470",
       "id": "20210101-000829_1764816744",
       "dateCreated": "Jan 1, 2021 12:08:29 AM",
-      "dateStarted": "Jan 1, 2021 1:51:57 AM",
-      "dateFinished": "Jan 1, 2021 1:51:58 AM",
+      "dateStarted": "Jan 29, 2021 4:58:24 PM",
+      "dateFinished": "Jan 29, 2021 4:58:24 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "z.put(\"WORKPATH\", \"/usr/hdp/current/zeppelin-server/komputerawangan/assignment1\")\nz.put(\"BIGCSV\", \"listings.csv\")\nz.put(\"COUNTRY\", \"singapore\")\nz.put(\"DATASET\", \"listings\")\n",
       "user": "anonymous",
-      "dateUpdated": "Jan 1, 2021 7:56:13 AM",
+      "dateUpdated": "Jan 29, 2021 4:46:41 PM",
       "config": {
         "colWidth": 3.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
-          "language": "scala"
+          "language": "scala",
+          "editOnDblClick": false
         },
         "editorMode": "ace/mode/scala"
       },
@@ -63,15 +64,129 @@
       "jobName": "paragraph_1609465874643_459360281",
       "id": "20210101-015114_836921952",
       "dateCreated": "Jan 1, 2021 1:51:14 AM",
-      "dateStarted": "Jan 1, 2021 7:56:13 AM",
-      "dateFinished": "Jan 1, 2021 7:56:14 AM",
+      "dateStarted": "Jan 29, 2021 4:46:41 PM",
+      "dateFinished": "Jan 29, 2021 4:46:42 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%pyspark\n\nfrom urllib2 import urlopen\nimport pandas as pd\nimport re, os\n\ndef airbnburlminer(country\u003d\u0027singapore\u0027, dataset\u003d\u0027listings\u0027, ext\u003d\u0027.csv.gz\u0027):\n    page \u003d urlopen(\u0027http://insideairbnb.com/get-the-data.html\u0027)\n    html \u003d page.read().decode(\"utf-8\")\n    urlarr \u003d [str(re.sub(\u0027\u003ca href\u003d\".*?\u0027, \"\", csvfile)).replace(\u0027\"\u0027,\u0027\u0027) for csvfile in re.findall(\u0027\u003ca href\u003d\".*{}.*?{}{}\"\u0027.format(country,dataset,ext), html)]\n    print(\u0027\\n\u0027.join(urlarr))\n    return pd.concat(map(lambda file: pd.read_csv(file, low_memory\u003dFalse), urlarr))\n    \n\ndf \u003d airbnburlminer()\ndf \u003d df.drop_duplicates()\n\n\n\n",
+      "text": "%md\n\n## **Zeppelin** ##\n\n **Data Ingestion | Data Discovery | Data Analytics | Data Visualization \u0026 Collaboration**\n \nAllows any language/data-processing-backend to be plugged into Zeppelin. Currently Apache Zeppelin supports many interpreters such as Apache Spark, Python, JDBC, Markdown and Shell.",
       "user": "anonymous",
-      "dateUpdated": "Jan 1, 2021 7:51:43 AM",
+      "dateUpdated": "Jan 29, 2021 5:05:19 PM",
+      "config": {
+        "colWidth": 3.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003ch2\u003e\u003cstrong\u003eZeppelin\u003c/strong\u003e\u003c/h2\u003e\n\u003cp\u003e\u003cstrong\u003eData Ingestion | Data Discovery | Data Analytics | Data Visualization \u0026amp; Collaboration\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003eAllows any language/data-processing-backend to be plugged into Zeppelin. Currently Apache Zeppelin supports many interpreters such as Apache Spark, Python, JDBC, Markdown and Shell.\u003c/p\u003e\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1611937643769_1093186582",
+      "id": "20210129-162723_615830543",
+      "dateCreated": "Jan 29, 2021 4:27:23 PM",
+      "dateStarted": "Jan 29, 2021 5:05:19 PM",
+      "dateFinished": "Jan 29, 2021 5:05:19 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n![alt-image](https://datascience-enthusiast.com/figures/spark_python.PNG)\n\n\n### **PySpark** ###\nA collaboration of Apache Spark and Python. Apache Spark is an open-source cluster-computing framework, built around speed, ease of use, and streaming analytics whereas Python is a general-purpose, high-level programming language.",
+      "user": "anonymous",
+      "dateUpdated": "Jan 29, 2021 5:05:03 PM",
+      "config": {
+        "colWidth": 7.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cp\u003e\u003cimg src\u003d\"https://datascience-enthusiast.com/figures/spark_python.PNG\" alt\u003d\"alt-image\" /\u003e\u003c/p\u003e\n\u003ch3\u003e\u003cstrong\u003ePySpark\u003c/strong\u003e\u003c/h3\u003e\n\u003cp\u003eA collaboration of Apache Spark and Python. Apache Spark is an open-source cluster-computing framework, built around speed, ease of use, and streaming analytics whereas Python is a general-purpose, high-level programming language.\u003c/p\u003e\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1611939487036_25449027",
+      "id": "20210129-165807_1608534897",
+      "dateCreated": "Jan 29, 2021 4:58:07 PM",
+      "dateStarted": "Jan 29, 2021 5:04:43 PM",
+      "dateFinished": "Jan 29, 2021 5:04:43 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n![Alt Text](https://i.ibb.co/F0LDRST/dmimage.png)\n### **Data Mining using Python via PySpark** ###\n\n* Extract using keywords \"singapore\" and \"listings\"\n* Merge into single table using Python Pandas Dataframe\n",
+      "user": "anonymous",
+      "dateUpdated": "Jan 29, 2021 5:04:55 PM",
+      "config": {
+        "colWidth": 5.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cp\u003e\u003cimg src\u003d\"https://i.ibb.co/F0LDRST/dmimage.png\" alt\u003d\"Alt Text\" /\u003e\u003c/p\u003e\n\u003ch3\u003e\u003cstrong\u003eData Mining using Python via PySpark\u003c/strong\u003e\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eExtract using keywords \u0026ldquo;singapore\u0026rdquo; and \u0026ldquo;listings\u0026rdquo;\u003c/li\u003e\n\u003cli\u003eMerge into single table using Python Pandas Dataframe\u003c/li\u003e\n\u003c/ul\u003e\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1611939152621_841093148",
+      "id": "20210129-165232_906012054",
+      "dateCreated": "Jan 29, 2021 4:52:32 PM",
+      "dateStarted": "Jan 29, 2021 5:04:46 PM",
+      "dateFinished": "Jan 29, 2021 5:04:46 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n\nfrom urllib2 import urlopen\nimport pandas as pd\nimport re, os\n\ndef airbnburlminer(country\u003d\u0027singapore\u0027, dataset\u003d\u0027listings\u0027, ext\u003d\u0027.csv.gz\u0027):\n    page \u003d urlopen(\u0027http://insideairbnb.com/get-the-data.html\u0027)\n    html \u003d page.read().decode(\"utf-8\")\n    urlarr \u003d [str(re.sub(\u0027\u003ca href\u003d\".*?\u0027, \"\", csvfile)).replace(\u0027\"\u0027,\u0027\u0027) for csvfile in re.findall(\u0027\u003ca href\u003d\".*{}.*?{}{}\"\u0027.format(country,dataset,ext), html)]\n    print(\u0027\\n\u0027.join(urlarr))\n    return pd.concat(map(lambda file: pd.read_csv(file, low_memory\u003dFalse), urlarr))\n    \n#mining insiderairbnb page \ndf \u003d airbnburlminer()\ndf \u003d df.drop_duplicates()\n#remove any duplicate rows\n\n\n",
+      "user": "anonymous",
+      "dateUpdated": "Jan 29, 2021 5:07:01 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -91,7 +206,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "http://data.insideairbnb.com/singapore/sg/singapore/2020-10-26/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2020-06-22/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2020-05-27/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2020-04-26/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2020-03-21/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2020-02-27/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2020-01-26/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-12-28/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-11-26/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-10-25/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-09-25/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-08-28/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-07-21/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-06-25/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-05-23/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-04-20/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-03-18/data/listings.csv.gz\n\u003cstring\u003e:9: FutureWarning: Sorting because non-concatenation axis is not aligned. A future version\nof pandas will change to not sort by default.\n\nTo accept the future behavior, pass \u0027sort\u003dFalse\u0027.\n\nTo retain the current behavior and silence the warning, pass \u0027sort\u003dTrue\u0027.\n\n"
+            "data": "http://data.insideairbnb.com/singapore/sg/singapore/2020-12-29/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2020-11-27/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2020-10-26/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2020-06-22/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2020-05-27/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2020-04-26/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2020-03-21/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2020-02-27/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2020-01-26/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-12-28/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-11-26/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-10-25/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-09-25/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-08-28/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-07-21/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-06-25/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-05-23/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-04-20/data/listings.csv.gz\nhttp://data.insideairbnb.com/singapore/sg/singapore/2019-03-18/data/listings.csv.gz\n"
           }
         ]
       },
@@ -99,15 +214,15 @@
       "jobName": "paragraph_1609460864164_1746050977",
       "id": "20210101-002744_280668179",
       "dateCreated": "Jan 1, 2021 12:27:44 AM",
-      "dateStarted": "Jan 1, 2021 7:51:43 AM",
-      "dateFinished": "Jan 1, 2021 7:54:18 AM",
+      "dateStarted": "Jan 29, 2021 3:08:10 PM",
+      "dateFinished": "Jan 29, 2021 3:11:18 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\n\ndf.info(verbose\u003dTrue, null_counts\u003dTrue)",
       "user": "anonymous",
-      "dateUpdated": "Jan 1, 2021 7:51:48 AM",
+      "dateUpdated": "Jan 29, 2021 3:13:44 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -121,7 +236,8 @@
           }
         },
         "editorSetting": {
-          "language": "python"
+          "language": "python",
+          "editOnDblClick": false
         },
         "editorMode": "ace/mode/python"
       },
@@ -134,7 +250,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "\u003cclass \u0027pandas.core.frame.DataFrame\u0027\u003e\nInt64Index: 130068 entries, 0 to 7974\nData columns (total 108 columns):\naccess                                          79883 non-null object\naccommodates                                    130068 non-null int64\namenities                                       130068 non-null object\navailability_30                                 130068 non-null int64\navailability_365                                130068 non-null int64\navailability_60                                 130068 non-null int64\navailability_90                                 130068 non-null int64\nbathrooms                                       125498 non-null float64\nbathrooms_text                                  4478 non-null object\nbed_type                                        125576 non-null object\nbedrooms                                        129589 non-null float64\nbeds                                            129494 non-null float64\ncalculated_host_listings_count                  130068 non-null int64\ncalculated_host_listings_count_entire_homes     130068 non-null int64\ncalculated_host_listings_count_private_rooms    130068 non-null int64\ncalculated_host_listings_count_shared_rooms     130068 non-null int64\ncalendar_last_scraped                           130068 non-null object\ncalendar_updated                                125576 non-null object\ncancellation_policy                             125576 non-null object\ncity                                            124454 non-null object\ncleaning_fee                                    91918 non-null object\ncountry                                         125576 non-null object\ncountry_code                                    125576 non-null object\ndescription                                     126967 non-null object\nexperiences_offered                             125576 non-null object\nextra_people                                    125576 non-null object\nfirst_review                                    82200 non-null object\nguests_included                                 125576 non-null float64\nhas_availability                                130068 non-null object\nhost_about                                      84028 non-null object\nhost_acceptance_rate                            34542 non-null object\nhost_has_profile_pic                            129879 non-null object\nhost_id                                         130068 non-null int64\nhost_identity_verified                          129879 non-null object\nhost_is_superhost                               129879 non-null object\nhost_listings_count                             129879 non-null float64\nhost_location                                   129568 non-null object\nhost_name                                       129879 non-null object\nhost_neighbourhood                              114443 non-null object\nhost_picture_url                                129879 non-null object\nhost_response_rate                              105921 non-null object\nhost_response_time                              105921 non-null object\nhost_since                                      129879 non-null object\nhost_thumbnail_url                              129879 non-null object\nhost_total_listings_count                       129879 non-null float64\nhost_url                                        130068 non-null object\nhost_verifications                              130068 non-null object\nhouse_rules                                     63146 non-null object\nid                                              130068 non-null int64\ninstant_bookable                                130068 non-null object\ninteraction                                     71851 non-null object\nis_business_travel_ready                        125576 non-null object\nis_location_exact                               125576 non-null object\njurisdiction_names                              5 non-null object\nlast_review                                     82200 non-null object\nlast_scraped                                    130068 non-null object\nlatitude                                        130068 non-null float64\nlicense                                         73 non-null object\nlisting_url                                     130068 non-null object\nlongitude                                       130068 non-null float64\nmarket                                          124091 non-null object\nmaximum_maximum_nights                          130068 non-null int64\nmaximum_minimum_nights                          130068 non-null int64\nmaximum_nights                                  130068 non-null int64\nmaximum_nights_avg_ntm                          130068 non-null float64\nmedium_url                                      0 non-null float64\nminimum_maximum_nights                          130068 non-null int64\nminimum_minimum_nights                          130068 non-null int64\nminimum_nights                                  130068 non-null int64\nminimum_nights_avg_ntm                          130068 non-null float64\nmonthly_price                                   9709 non-null object\nname                                            130040 non-null object\nneighborhood_overview                           77917 non-null object\nneighbourhood                                   128163 non-null object\nneighbourhood_cleansed                          130068 non-null object\nneighbourhood_group_cleansed                    130068 non-null object\nnotes                                           72088 non-null object\nnumber_of_reviews                               130068 non-null int64\nnumber_of_reviews_l30d                          4492 non-null float64\nnumber_of_reviews_ltm                           130068 non-null int64\npicture_url                                     130068 non-null object\nprice                                           130068 non-null object\nproperty_type                                   130068 non-null object\nrequire_guest_phone_verification                125576 non-null object\nrequire_guest_profile_picture                   125576 non-null object\nrequires_license                                125576 non-null object\nreview_scores_accuracy                          79790 non-null float64\nreview_scores_checkin                           79722 non-null float64\nreview_scores_cleanliness                       79829 non-null float64\nreview_scores_communication                     79790 non-null float64\nreview_scores_location                          79710 non-null float64\nreview_scores_rating                            79875 non-null float64\nreview_scores_value                             79722 non-null float64\nreviews_per_month                               82200 non-null float64\nroom_type                                       130068 non-null object\nscrape_id                                       130068 non-null int64\nsecurity_deposit                                88336 non-null object\nsmart_location                                  125576 non-null object\nspace                                           92657 non-null object\nsquare_feet                                     687 non-null float64\nstate                                           10327 non-null object\nstreet                                          125576 non-null object\nsummary                                         121097 non-null object\nthumbnail_url                                   0 non-null float64\ntransit                                         75163 non-null object\nweekly_price                                    8495 non-null object\nxl_picture_url                                  0 non-null float64\nzipcode                                         111931 non-null object\ndtypes: float64(23), int64(20), object(65)\nmemory usage: 108.2+ MB\n"
+            "data": "\u003cclass \u0027pandas.core.frame.DataFrame\u0027\u003e\nInt64Index: 138960 entries, 0 to 7974\nData columns (total 108 columns):\naccess                                          79883 non-null object\naccommodates                                    138960 non-null int64\namenities                                       138960 non-null object\navailability_30                                 138960 non-null int64\navailability_365                                138960 non-null int64\navailability_60                                 138960 non-null int64\navailability_90                                 138960 non-null int64\nbathrooms                                       125498 non-null float64\nbathrooms_text                                  13339 non-null object\nbed_type                                        125576 non-null object\nbedrooms                                        137688 non-null float64\nbeds                                            138265 non-null float64\ncalculated_host_listings_count                  138960 non-null int64\ncalculated_host_listings_count_entire_homes     138960 non-null int64\ncalculated_host_listings_count_private_rooms    138960 non-null int64\ncalculated_host_listings_count_shared_rooms     138960 non-null int64\ncalendar_last_scraped                           138960 non-null object\ncalendar_updated                                125576 non-null object\ncancellation_policy                             125576 non-null object\ncity                                            124454 non-null object\ncleaning_fee                                    91918 non-null object\ncountry                                         125576 non-null object\ncountry_code                                    125576 non-null object\ndescription                                     135578 non-null object\nexperiences_offered                             125576 non-null object\nextra_people                                    125576 non-null object\nfirst_review                                    87405 non-null object\nguests_included                                 125576 non-null float64\nhas_availability                                138960 non-null object\nhost_about                                      90345 non-null object\nhost_acceptance_rate                            42076 non-null object\nhost_has_profile_pic                            138750 non-null object\nhost_id                                         138960 non-null int64\nhost_identity_verified                          138750 non-null object\nhost_is_superhost                               138750 non-null object\nhost_listings_count                             138750 non-null float64\nhost_location                                   138437 non-null object\nhost_name                                       138750 non-null object\nhost_neighbourhood                              122490 non-null object\nhost_picture_url                                138750 non-null object\nhost_response_rate                              113637 non-null object\nhost_response_time                              113637 non-null object\nhost_since                                      138750 non-null object\nhost_thumbnail_url                              138750 non-null object\nhost_total_listings_count                       138750 non-null float64\nhost_url                                        138960 non-null object\nhost_verifications                              138960 non-null object\nhouse_rules                                     63146 non-null object\nid                                              138960 non-null int64\ninstant_bookable                                138960 non-null object\ninteraction                                     71851 non-null object\nis_business_travel_ready                        125576 non-null object\nis_location_exact                               125576 non-null object\njurisdiction_names                              5 non-null object\nlast_review                                     87405 non-null object\nlast_scraped                                    138960 non-null object\nlatitude                                        138960 non-null float64\nlicense                                         73 non-null object\nlisting_url                                     138960 non-null object\nlongitude                                       138960 non-null float64\nmarket                                          124091 non-null object\nmaximum_maximum_nights                          138960 non-null int64\nmaximum_minimum_nights                          138960 non-null int64\nmaximum_nights                                  138960 non-null int64\nmaximum_nights_avg_ntm                          138960 non-null float64\nmedium_url                                      0 non-null float64\nminimum_maximum_nights                          138960 non-null int64\nminimum_minimum_nights                          138960 non-null int64\nminimum_nights                                  138960 non-null int64\nminimum_nights_avg_ntm                          138960 non-null float64\nmonthly_price                                   9709 non-null object\nname                                            138932 non-null object\nneighborhood_overview                           83777 non-null object\nneighbourhood                                   134023 non-null object\nneighbourhood_cleansed                          138960 non-null object\nneighbourhood_group_cleansed                    138960 non-null object\nnotes                                           72088 non-null object\nnumber_of_reviews                               138960 non-null int64\nnumber_of_reviews_l30d                          13384 non-null float64\nnumber_of_reviews_ltm                           138960 non-null int64\npicture_url                                     138960 non-null object\nprice                                           138960 non-null object\nproperty_type                                   138960 non-null object\nrequire_guest_phone_verification                125576 non-null object\nrequire_guest_profile_picture                   125576 non-null object\nrequires_license                                125576 non-null object\nreview_scores_accuracy                          84866 non-null float64\nreview_scores_checkin                           84796 non-null float64\nreview_scores_cleanliness                       84907 non-null float64\nreview_scores_communication                     84866 non-null float64\nreview_scores_location                          84782 non-null float64\nreview_scores_rating                            84960 non-null float64\nreview_scores_value                             84794 non-null float64\nreviews_per_month                               87405 non-null float64\nroom_type                                       138960 non-null object\nscrape_id                                       138960 non-null int64\nsecurity_deposit                                88336 non-null object\nsmart_location                                  125576 non-null object\nspace                                           92657 non-null object\nsquare_feet                                     687 non-null float64\nstate                                           10327 non-null object\nstreet                                          125576 non-null object\nsummary                                         121097 non-null object\nthumbnail_url                                   0 non-null float64\ntransit                                         75163 non-null object\nweekly_price                                    8495 non-null object\nxl_picture_url                                  0 non-null float64\nzipcode                                         111931 non-null object\ndtypes: float64(23), int64(20), object(65)\nmemory usage: 115.6+ MB\n"
           }
         ]
       },
@@ -142,21 +258,22 @@
       "jobName": "paragraph_1609464326974_-978652675",
       "id": "20210101-012526_1370460239",
       "dateCreated": "Jan 1, 2021 1:25:26 AM",
-      "dateStarted": "Jan 1, 2021 7:51:48 AM",
-      "dateFinished": "Jan 1, 2021 7:54:18 AM",
+      "dateStarted": "Jan 29, 2021 3:13:44 PM",
+      "dateFinished": "Jan 29, 2021 3:13:45 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%pyspark\n\nnulldf \u003d pd.isnull(df).sum()/len(df)\nnulldf \u003d pd.DataFrame(nulldf.sort_values(ascending\u003dFalse),columns\u003d[\"null_values\"])\nreviewarr \u003d [col for col in df.columns.tolist() if \"review_scores\" in col]\nnullcol \u003d [col for col in nulldf[nulldf[\u0027null_values\u0027] \u003e 0].index.tolist() if col not in [\u0027beds\u0027,\u0027bathrooms\u0027,\u0027bedrooms\u0027]+reviewarr]\nairbnbdf \u003d df.drop(axis\u003d1, columns\u003dnullcol)\nairbnbdf \u003d airbnbdf.dropna(how\u003d\u0027any\u0027,axis\u003d0)\nairbnbdf \u003d airbnbdf.fillna(0,axis\u003d1)",
+      "text": "%pyspark\n# Data cleaning / remove null values\nnulldf \u003d pd.isnull(df).sum()/len(df)\nnulldf \u003d pd.DataFrame(nulldf.sort_values(ascending\u003dFalse),columns\u003d[\"null_values\"])\nreviewarr \u003d [col for col in df.columns.tolist() if \"review_scores\" in col]\nnullcol \u003d [col for col in nulldf[nulldf[\u0027null_values\u0027] \u003e 0].index.tolist() if col not in [\u0027beds\u0027,\u0027bathrooms\u0027,\u0027bedrooms\u0027]+reviewarr]\nairbnbdf \u003d df.drop(axis\u003d1, columns\u003dnullcol)\nairbnbdf \u003d airbnbdf.dropna(how\u003d\u0027any\u0027,axis\u003d0)\nairbnbdf \u003d airbnbdf.fillna(0,axis\u003d1)",
       "user": "anonymous",
-      "dateUpdated": "Jan 1, 2021 7:51:52 AM",
+      "dateUpdated": "Jan 29, 2021 5:06:06 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
-          "language": "python"
+          "language": "python",
+          "editOnDblClick": false
         },
         "editorMode": "ace/mode/python"
       },
@@ -172,15 +289,15 @@
       "jobName": "paragraph_1609471996037_-5003006",
       "id": "20210101-033316_547324878",
       "dateCreated": "Jan 1, 2021 3:33:16 AM",
-      "dateStarted": "Jan 1, 2021 7:54:18 AM",
-      "dateFinished": "Jan 1, 2021 7:54:19 AM",
+      "dateStarted": "Jan 29, 2021 3:13:49 PM",
+      "dateFinished": "Jan 29, 2021 3:13:51 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\n\ndel df, nulldf\nairbnbdf.info()\nairbnbdf.to_csv(os.path.join(z.get(\u0027WORKPATH\u0027),z.get(\u0027BIGCSV\u0027)), index\u003dFalse)",
       "user": "anonymous",
-      "dateUpdated": "Jan 1, 2021 8:07:15 AM",
+      "dateUpdated": "Jan 29, 2021 3:13:53 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
@@ -194,7 +311,8 @@
           }
         },
         "editorSetting": {
-          "language": "python"
+          "language": "python",
+          "editOnDblClick": false
         },
         "editorMode": "ace/mode/python"
       },
@@ -215,21 +333,38 @@
       "jobName": "paragraph_1609472032579_-613428935",
       "id": "20210101-033352_50327176",
       "dateCreated": "Jan 1, 2021 3:33:52 AM",
-      "dateStarted": "Jan 1, 2021 7:56:16 AM",
-      "dateFinished": "Jan 1, 2021 7:56:19 AM",
+      "dateStarted": "Jan 29, 2021 3:13:53 PM",
+      "dateFinished": "Jan 29, 2021 3:13:56 PM",
       "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "Jan 29, 2021 3:15:09 PM",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1611933309186_240040693",
+      "id": "20210129-151509_1172969634",
+      "dateCreated": "Jan 29, 2021 3:15:09 PM",
+      "status": "READY",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\n\nspark.sql(\u0027DROP TABLE IF EXISTS default.singapore_listings\u0027)\npdf \u003d spark.createDataFrame(airbnbdf)\npdf.write.saveAsTable(\u0027singapore_listings_new\u0027)\nprint pdf.printSchema()\ndel pdf, airbnbdf\n",
       "user": "anonymous",
-      "dateUpdated": "Jan 1, 2021 8:07:23 AM",
+      "dateUpdated": "Jan 29, 2021 3:13:58 PM",
       "config": {
-        "colWidth": 4.0,
+        "colWidth": 12.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
-          "language": "python"
+          "language": "python",
+          "editOnDblClick": false
         },
         "editorMode": "ace/mode/python"
       },
@@ -250,19 +385,179 @@
       "jobName": "paragraph_1609472483162_-1053939066",
       "id": "20210101-034123_1744419250",
       "dateCreated": "Jan 1, 2021 3:41:23 AM",
-      "dateStarted": "Jan 1, 2021 8:03:07 AM",
-      "dateFinished": "Jan 1, 2021 8:03:58 AM",
+      "dateStarted": "Jan 29, 2021 3:13:58 PM",
+      "dateFinished": "Jan 29, 2021 3:14:56 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n#### **Delete HDFS file** ####\n\ndelete a directory on the file system\n\n````bash\nhadoop fs -rm -r -f {output hdfs}\n````",
+      "user": "anonymous",
+      "dateUpdated": "Jan 29, 2021 3:08:23 PM",
+      "config": {
+        "colWidth": 3.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003ch4\u003e\u003cstrong\u003eDelete HDFS file\u003c/strong\u003e\u003c/h4\u003e\n\u003cp\u003edelete a directory on the file system\u003c/p\u003e\n\u003cpre\u003e\u003ccode class\u003d\"bash\"\u003ehadoop fs -rm -r -f {output hdfs}\n\u003c/code\u003e\u003c/pre\u003e\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1611932763542_-22521166",
+      "id": "20210129-150603_585668038",
+      "dateCreated": "Jan 29, 2021 3:06:03 PM",
+      "dateStarted": "Jan 29, 2021 3:06:35 PM",
+      "dateFinished": "Jan 29, 2021 3:06:35 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n#### **Make HDFS file** ####\n\nmake a directory on the file system\n\n````bash\nhadoop fs -mkdir {output hdfs}\n````",
+      "user": "anonymous",
+      "dateUpdated": "Jan 29, 2021 3:08:26 PM",
+      "config": {
+        "colWidth": 3.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003ch4\u003e\u003cstrong\u003eMake HDFS file\u003c/strong\u003e\u003c/h4\u003e\n\u003cp\u003emake a directory on the file system\u003c/p\u003e\n\u003cpre\u003e\u003ccode class\u003d\"bash\"\u003ehadoop fs -mkdir {output hdfs}\n\u003c/code\u003e\u003c/pre\u003e\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1611932811410_-1456803769",
+      "id": "20210129-150651_951626199",
+      "dateCreated": "Jan 29, 2021 3:06:51 PM",
+      "dateStarted": "Jan 29, 2021 3:07:01 PM",
+      "dateFinished": "Jan 29, 2021 3:07:01 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n#### **Adding raw files to HDFS** ####\n\ncopy a file from the local storage onto file system\n\n````bash\nhadoop fs -put {input 1} {input 2} {input 3} {output hdfs}\n````",
+      "user": "anonymous",
+      "dateUpdated": "Jan 29, 2021 3:08:29 PM",
+      "config": {
+        "colWidth": 3.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003ch4\u003e\u003cstrong\u003eAdding raw files to HDFS\u003c/strong\u003e\u003c/h4\u003e\n\u003cp\u003ecopy a file from the local storage onto file system\u003c/p\u003e\n\u003cpre\u003e\u003ccode class\u003d\"bash\"\u003ehadoop fs -put {input 1} {input 2} {input 3} {output hdfs}\n\u003c/code\u003e\u003c/pre\u003e\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1611932839085_1232453125",
+      "id": "20210129-150719_1937755046",
+      "dateCreated": "Jan 29, 2021 3:07:19 PM",
+      "dateStarted": "Jan 29, 2021 3:07:24 PM",
+      "dateFinished": "Jan 29, 2021 3:07:24 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n#### **List HDFS files** ####\n\nlist files in the path of the file system\n\n````bash\nhadoop fs -ls {output hdfs}\n````",
+      "user": "anonymous",
+      "dateUpdated": "Jan 29, 2021 3:08:32 PM",
+      "config": {
+        "colWidth": 3.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003ch4\u003e\u003cstrong\u003eList HDFS files\u003c/strong\u003e\u003c/h4\u003e\n\u003cp\u003elist files in the path of the file system\u003c/p\u003e\n\u003cpre\u003e\u003ccode class\u003d\"bash\"\u003ehadoop fs -ls {output hdfs}\n\u003c/code\u003e\u003c/pre\u003e\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1611932853104_-1331498221",
+      "id": "20210129-150733_1700679549",
+      "dateCreated": "Jan 29, 2021 3:07:33 PM",
+      "dateStarted": "Jan 29, 2021 3:07:42 PM",
+      "dateFinished": "Jan 29, 2021 3:07:42 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%sh\n\nhadoop fs -rm -r -f /sglistings\nhadoop fs -mkdir /sglistings\nhadoop fs -put /usr/hdp/current/zeppelin-server/komputerawangan/assignment1/listings.csv /sglistings\nhadoop fs -ls /sglistings",
       "user": "anonymous",
-      "dateUpdated": "Jan 1, 2021 7:43:37 AM",
+      "dateUpdated": "Jan 29, 2021 3:25:18 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
-        "results": {},
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 254.0,
+              "optionOpen": false
+            }
+          }
+        },
         "editorSetting": {
           "language": "sh",
           "editOnDblClick": false
@@ -278,7 +573,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "21/01/01 07:43:39 INFO fs.TrashPolicyDefault: Moved: \u0027hdfs://sandbox-hdp.hortonworks.com:8020/sglistings\u0027 to trash at: hdfs://sandbox-hdp.hortonworks.com:8020/user/zeppelin/.Trash/Current/sglistings1609487019660\nFound 1 items\n-rw-r--r--   1 zeppelin hdfs   64964953 2021-01-01 07:43 /sglistings/listings.csv\n"
+            "data": "21/01/29 15:19:57 INFO fs.TrashPolicyDefault: Moved: \u0027hdfs://sandbox-hdp.hortonworks.com:8020/sglistings\u0027 to trash at: hdfs://sandbox-hdp.hortonworks.com:8020/user/zeppelin/.Trash/Current/sglistings\nFound 1 items\n-rw-r--r--   1 zeppelin hdfs   64964953 2021-01-29 15:20 /sglistings/listings.csv\n"
           }
         ]
       },
@@ -286,21 +581,22 @@
       "jobName": "paragraph_1609467532607_-1797604127",
       "id": "20210101-021852_1476460381",
       "dateCreated": "Jan 1, 2021 2:18:52 AM",
-      "dateStarted": "Jan 1, 2021 7:43:37 AM",
-      "dateFinished": "Jan 1, 2021 7:43:47 AM",
+      "dateStarted": "Jan 29, 2021 3:19:55 PM",
+      "dateFinished": "Jan 29, 2021 3:20:05 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\nfrom pyspark.sql import SparkSession\n\nspark.sql(\u0027DROP TABLE IF EXISTS default.singapore_listings_old\u0027)\nsparkSession \u003d SparkSession.builder.appName(\"sglistingssparkold\").getOrCreate()\nsdf \u003d sparkSession.read.csv(\u0027hdfs://sandbox-hdp.hortonworks.com:8020/sglistings/listings.csv\u0027,header\u003d\u0027true\u0027)\nsdf.write.saveAsTable(\u0027singapore_listings_old\u0027)\nprint sdf.printSchema()\n\ndel sdf",
       "user": "anonymous",
-      "dateUpdated": "Jan 1, 2021 8:00:45 AM",
+      "dateUpdated": "Jan 29, 2021 3:24:51 PM",
       "config": {
         "colWidth": 4.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
-          "language": "python"
+          "language": "python",
+          "editOnDblClick": false
         },
         "editorMode": "ace/mode/python"
       },
@@ -321,15 +617,55 @@
       "jobName": "paragraph_1609459815923_2116465644",
       "id": "20210101-001015_1719729192",
       "dateCreated": "Jan 1, 2021 12:10:15 AM",
-      "dateStarted": "Jan 1, 2021 7:58:06 AM",
-      "dateFinished": "Jan 1, 2021 7:58:13 AM",
+      "dateStarted": "Jan 29, 2021 3:24:51 PM",
+      "dateFinished": "Jan 29, 2021 3:24:59 PM",
       "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sh\n\necho \"sgcsvlisting \u003d load \u0027hdfs://sandbox-hdp.hortonworks.com:8020/sglistings/listings.csv\u0027 using PigStorage(\u0027,\u0027) as\n(accommodates:Long, amenities:chararray, availability_30:Long, availability_365:Long, availability_60:Long, availability_90:Long, bathrooms:Int, bedrooms:Int, beds:Int, calculated_host_listings_count:Long, calculated_host_listings_count_entire_homes:Long, calculated_host_listings_count_private_rooms:Long, calculated_host_listings_count_shared_rooms:Long, calendar_last_scraped:chararray, has_availability:chararray, host_id:Long, host_url:chararray, host_verifications:chararray, id:Long, instant_bookable:chararray, last_scraped:chararray, latitude:Double, listing_url:chararray, longitude:Double, maximum_maximum_nights:Long, maximum_minimum_nights:Long, maximum_nights:Long, maximum_nights_avg_ntm:Double, minimum_maximum_nights:Long, minimum_minimum_nights:Long, minimum_nights:Long, minimum_nights_avg_ntm:Double, neighbourhood_cleansed:chararray, neighbourhood_group_cleansed:chararray, number_of_reviews:Long, number_of_reviews_ltm:Long, picture_url:chararray, price:chararray, property_type:chararray, review_scores_accuracy:Double, review_scores_checkin:Double, review_scores_cleanliness:Double, review_scores_communication:Double, review_scores_location:Double, review_scores_rating:Double, review_scores_value:Double, room_type:chararray, scrape_id:Long);\nSTORE sgcsvlisting into \u0027singapore_listings_pig\u0027 USING  org.apache.hive.hcatalog.pig.HCatStorer();\" \u003e sglisting.pig\n#\u0027singapore_listings_pig\u0027 USING  org.apache.hive.hcatalog.pig.HCatStorer();\n#hdfs://localhost:9000/pig_Output/ \u0027 USING PigStorage (\u0027,\u0027)\n\npig -useHCatalog sglisting.pig\n",
+      "user": "anonymous",
+      "dateUpdated": "Jan 29, 2021 4:26:28 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/sh"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "ls: cannot access /usr/hdp/2.6.5.0-292/hive/lib/slf4j-api-*.jar: No such file or directory\nls: cannot access /usr/hdp/2.6.5.0-292/hive-hcatalog/lib/*hbase-storage-handler-*.jar: No such file or directory\n21/01/29 16:23:34 INFO pig.ExecTypeProvider: Trying ExecType : LOCAL\n21/01/29 16:23:34 INFO pig.ExecTypeProvider: Trying ExecType : MAPREDUCE\n21/01/29 16:23:34 INFO pig.ExecTypeProvider: Trying ExecType : TEZ_LOCAL\n21/01/29 16:23:34 INFO pig.ExecTypeProvider: Trying ExecType : TEZ\n21/01/29 16:23:34 INFO pig.ExecTypeProvider: Picked TEZ as the ExecType\n2021-01-29 16:23:34,213 [main] INFO  org.apache.pig.Main - Apache Pig version 0.16.0.2.6.5.0-292 (rUnversioned directory) compiled May 11 2018, 07:56:28\n2021-01-29 16:23:34,213 [main] INFO  org.apache.pig.Main - Logging error messages to: /usr/hdp/2.6.5.0-292/zeppelin/pig_1611937414211.log\n2021-01-29 16:23:34,871 [main] INFO  org.apache.pig.impl.util.Utils - Default bootup file /home/zeppelin/.pigbootup not found\n2021-01-29 16:23:34,978 [main] INFO  org.apache.pig.backend.hadoop.executionengine.HExecutionEngine - Connecting to hadoop file system at: hdfs://sandbox-hdp.hortonworks.com:8020\n2021-01-29 16:23:35,695 [main] INFO  org.apache.pig.PigServer - Pig Script ID for the session: PIG-sglisting.pig-8da71986-3cfb-407c-987f-51c4074b6ea7\n2021-01-29 16:23:36,042 [main] INFO  org.apache.hadoop.yarn.client.api.impl.TimelineClientImpl - Timeline service address: http://sandbox-hdp.hortonworks.com:8188/ws/v1/timeline/\n2021-01-29 16:23:36,160 [main] INFO  org.apache.pig.backend.hadoop.PigATSClient - Created ATS Hook\n2021-01-29 16:23:36,880 [main] ERROR org.apache.pig.tools.grunt.Grunt - ERROR 1000: Error during parsing. Lexical error at line 4, column 0.  Encountered: \u003cEOF\u003e after : \"\"\nDetails at logfile: /usr/hdp/2.6.5.0-292/zeppelin/pig_1611937414211.log\n2021-01-29 16:23:36,895 [main] INFO  org.apache.pig.Main - Pig script completed in 2 seconds and 879 milliseconds (2879 ms)\n"
+          },
+          {
+            "type": "TEXT",
+            "data": "ExitValue: 8"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1611934618565_-1932964208",
+      "id": "20210129-153658_498098937",
+      "dateCreated": "Jan 29, 2021 3:36:58 PM",
+      "dateStarted": "Jan 29, 2021 4:23:33 PM",
+      "dateFinished": "Jan 29, 2021 4:23:37 PM",
+      "status": "ERROR",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%jdbc(hive)\n\nselect * from singapore_listings_new",
       "user": "anonymous",
-      "dateUpdated": "Jan 1, 2021 8:08:41 AM",
+      "dateUpdated": "Jan 29, 2021 3:25:05 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -393,8 +729,8 @@
       "jobName": "paragraph_1609461747745_-505287814",
       "id": "20210101-004227_1529361669",
       "dateCreated": "Jan 1, 2021 12:42:27 AM",
-      "dateStarted": "Jan 1, 2021 8:08:15 AM",
-      "dateFinished": "Jan 1, 2021 8:08:19 AM",
+      "dateStarted": "Jan 29, 2021 3:25:05 PM",
+      "dateFinished": "Jan 29, 2021 3:25:10 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
